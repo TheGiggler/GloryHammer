@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Tocci.Services.Models;
+using Tocci.Services.Grpc;
 
 namespace Tocci.Services
 {
-    public class ServiceReponses
+    public class SummaryServiceReport
     {
-        public List<object> Responses = new List<object>();
+
+        public List<ServiceReport> ServiceReports = new List<ServiceReport>();
 
     }
 
@@ -16,21 +19,34 @@ namespace Tocci.Services
     //class to manage the various configured and requested services, fan out requests, fan in results
     public class ServicesManager
     {
-        ServiceReponses response;
+        List<EndpointServiceBase> _endpointServices; //services injected in constructor
+        SummaryServiceReport _report;
 
-        public ServicesManager()
+        public ServicesManager(List<EndpointServiceBase>endpointServices)
         {
-            response = new ServiceReponses();
+            _endpointServices = endpointServices;
+            _report = new SummaryServiceReport();
         }
 
-        public async Task<object> SendServiceRequests(List<IEndpointDataService<object>> services)
+        public async Task<SummaryServiceReport> SendServiceRequests(List<ServiceType>serviceTypes)
         {
-            Parallel.ForEach(services, (currentService) =>
+            Parallel.ForEach(serviceTypes, (currentServiceType) =>
             {
-                response.Responses.Add(currentService.GetEndpointData());
+                //TODO TODO TODO
+                //check if service type is in requested list.  if not, skip it
+                //>do that here
+
+
+                var service = _endpointServices.Find(svc => svc.Type == currentServiceType);
+                if (service != null)
+                {
+                    //var report = await service.GetEndpointReport().Result();
+                    //should we await the call below?
+                    _report.ServiceReports.Add(service.GetEndpointReport().Result);
+                }
             });
 
-            return response;
+            return _report;
 
         }
 

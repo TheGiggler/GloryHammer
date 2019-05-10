@@ -4452,9 +4452,6 @@
       "Tocci.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "Tocci.Data": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/Tocci.Services.dll": {}
         },

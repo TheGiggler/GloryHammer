@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Tocci.GrpcClient
+namespace Tocci.Grpc
 {
     public class GrpcResult
     {
@@ -11,7 +11,7 @@ namespace Tocci.GrpcClient
 
     public class GrpcRequest
     {
-
+        
     }
 
    
@@ -20,12 +20,14 @@ namespace Tocci.GrpcClient
     {
         public class ServiceReponses
         {
-            public GrpcResult InvokeRPC(GrpcRequest request)
-            {
-                return new GrpcResult();
-            }
 
 
+
+        }
+
+        public static GrpcResult InvokeRPC(GrpcRequest request)
+        {
+            return new GrpcResult();
         }
     }
 }

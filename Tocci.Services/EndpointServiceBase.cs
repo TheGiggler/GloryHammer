@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Tocci.Services.Models;
 
 namespace Tocci.Services
 {
-    public abstract class EndpointServiceBase<T> : IEndpointDataService<T>
+    public abstract class EndpointServiceBase : IEndpointDataService
     {
         public abstract string InfoUrl { get; set; }
-        public abstract string Name { get; set; }
-        public abstract Task<object> GetEndpointData();
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public abstract string Name { get; }
+        public abstract Services.Models.ServiceType Type { get;  }
+        public abstract Task<ServiceReport> GetEndpointReport();
+
     }
 }

@@ -10,7 +10,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace Tocci.WebAPI
+namespace 
+
 {
     public class Startup
     {
@@ -25,6 +26,9 @@ namespace Tocci.WebAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
+            //Load service dependecies and put in a List that can be injected
+
 
             //this is a tad unusual.  I want to inject the configured
 

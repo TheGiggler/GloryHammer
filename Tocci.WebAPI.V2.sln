@@ -19,8 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcreteGeolocationService", "ConcreteGeolocationService\ConcreteGeolocationService.csproj", "{D639B972-DEBF-45DA-BF82-155CBF9F867F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tocci.GrpcClient", "Tocci.GrpcClient\Tocci.GrpcClient.csproj", "{A08D0392-42E2-426E-98E7-750F23B2191A}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,10 +53,6 @@ Global
 		{D639B972-DEBF-45DA-BF82-155CBF9F867F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D639B972-DEBF-45DA-BF82-155CBF9F867F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D639B972-DEBF-45DA-BF82-155CBF9F867F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A08D0392-42E2-426E-98E7-750F23B2191A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A08D0392-42E2-426E-98E7-750F23B2191A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A08D0392-42E2-426E-98E7-750F23B2191A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A08D0392-42E2-426E-98E7-750F23B2191A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

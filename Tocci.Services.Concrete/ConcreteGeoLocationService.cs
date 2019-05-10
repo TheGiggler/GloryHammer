@@ -2,20 +2,25 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using Tocci.Data.Models;
+using Tocci.Services.Models;
 
 namespace Tocci.Services.Concrete
 {
-    public class ConcreteGeoLocationService: EndpointServiceBase<IGeolocationService>
+    public class ConcreteGeoLocationService:EndpointServiceBase
     {
         private string uri, name;
-        public override string InfoUrl { get => uri; set => uri = value; }
-        public override string Name { get => name; set => name=value; }
+        public override string InfoUrl { get; set; }
+        public override string Name { get { return "Concrete Geolocation Service"; } }
+        public override ServiceType Type { get { return ServiceType.Geolocation; } }
 
-        public override async Task<object> GetEndpointData()
+        /// <summary>
+        /// Call the grpc service
+        /// </summary>
+        /// <returns></returns>
+        public override async Task<ServiceReport> GetEndpointReport()
         {
 
-            return null;
+            return new ServiceReport();
         }
     }
 }

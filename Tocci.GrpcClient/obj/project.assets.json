@@ -692,9 +692,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.GrpcClient\\Tocci.GrpcClient.csproj",
-      "projectName": "Tocci.GrpcClient",
-      "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.GrpcClient\\Tocci.GrpcClient.csproj",
+      "projectUniqueName": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.GrpcClient\\Tocci.Grpc.csproj",
+      "projectName": "Tocci.Grpc",
+      "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.GrpcClient\\Tocci.Grpc.csproj",
       "packagesPath": "C:\\Users\\mctoc\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.GrpcClient\\obj\\",
       "projectStyle": "PackageReference",

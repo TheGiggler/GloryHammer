@@ -3,29 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Tocci.Services.Models;
 
 namespace Tocci.WebAPI.Models
 {
-    /// <summary>
-    /// The services available
-    /// </summary>
-    public enum ServiceType
-    {
-        Geolocation = 0,
-        ReverseDns = 1,
-        RDAP = 2,
-        Ping = 3
-    }
 
-    /// <summary>
-    /// The status of a service
-    /// </summary>
-    public enum ServiceStatus
-    {
-        OK = 0,
-        Error = 1,
-        Unavailable = 2
-    }
 
     /// <summary>
     /// The status of an EndPointDataRequest
@@ -63,29 +45,12 @@ namespace Tocci.WebAPI.Models
     /// </summary>
     public class EndPointReport
     {
-        /// <summary>
-        /// If the service has ab address of some sort, this is it
-        /// </summary>
-        public string EndPointAddress { get; set; }
+
         /// <summary>
         /// List of all returned data from all requested services
         /// </summary>
-        public List<ServiceResponse> ServiceResponses { get; set; }
-
-
-    }
-    /// <summary>
-    /// 
-    /// </summary>
-    public struct ServiceResponse
-    {
-        public ServiceType ServiceType { get; set; }
-        public string ServiceUrl { get; set; }
-        public string ServiceName { get; set; }
-        public string Data { get; set; }
-        public ServiceStatus ServiceStatus { get; set; }
+        public List<ServiceReport> ServiceResponses { get; set; }
 
     }
-
 
 }

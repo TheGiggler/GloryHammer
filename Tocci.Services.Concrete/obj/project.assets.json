@@ -208,22 +208,9 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Tocci.Data/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.2",
-        "compile": {
-          "bin/placeholder/Tocci.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Tocci.Data.dll": {}
-        }
-      },
       "Tocci.Services/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
-        "dependencies": {
-          "Tocci.Data": "1.0.0"
-        },
         "compile": {
           "bin/placeholder/Tocci.Services.dll": {}
         },
@@ -701,11 +688,6 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
-    },
-    "Tocci.Data/1.0.0": {
-      "type": "project",
-      "path": "../Tocci.Data/Tocci.Data.csproj",
-      "msbuildProject": "../Tocci.Data/Tocci.Data.csproj"
     },
     "Tocci.Services/1.0.0": {
       "type": "project",

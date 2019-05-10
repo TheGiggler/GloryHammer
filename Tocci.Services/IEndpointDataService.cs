@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using Tocci.Services.Models;
 
 namespace Tocci.Services
 {
-    public interface IEndpointDataService<T>
+    public interface IEndpointDataService
     {
-        Task<object> GetEndpointData();
+        Task<ServiceReport> GetEndpointReport();
     }
 }

@@ -1,0 +1,9 @@
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.GrpcClient\bin\Debug\netcoreapp2.2\Tocci.Grpc.deps.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.GrpcClient\bin\Debug\netcoreapp2.2\Tocci.Grpc.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.GrpcClient\bin\Debug\netcoreapp2.2\Tocci.Grpc.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.GrpcClient\obj\Debug\netcoreapp2.2\Tocci.Grpc.csprojAssemblyReference.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.GrpcClient\obj\Debug\netcoreapp2.2\Tocci.Grpc.csproj.CoreCompileInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.GrpcClient\obj\Debug\netcoreapp2.2\Tocci.Grpc.AssemblyInfoInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.GrpcClient\obj\Debug\netcoreapp2.2\Tocci.Grpc.AssemblyInfo.cs
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.GrpcClient\obj\Debug\netcoreapp2.2\Tocci.Grpc.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.GrpcClient\obj\Debug\netcoreapp2.2\Tocci.Grpc.pdb

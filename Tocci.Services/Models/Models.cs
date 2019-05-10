@@ -30,7 +30,7 @@ namespace Tocci.Services.Models
     /// <summary>
     /// 
     /// </summary>
-    public struct ServiceResponse
+    public struct ServiceReport
     {
         public ServiceType ServiceType { get; set; }
         public string ServiceUrl { get; set; }
@@ -39,5 +39,16 @@ namespace Tocci.Services.Models
         public ServiceStatus ServiceStatus { get; set; }
 
     }
+
+    public class GrpcResult
+    {
+
+    }
+
+    public class GrpcRequest
+    {
+
+    }
+
 
 }

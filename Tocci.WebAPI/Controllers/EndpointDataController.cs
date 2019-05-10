@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Tocci.Services;
 using Tocci.WebAPI.Models;
+using Tocci.Services.Models;
 
 namespace Tocci.WebAPI.Controllers
 {
@@ -17,9 +18,9 @@ namespace Tocci.WebAPI.Controllers
         List<ServiceType> defaultServices = new List<ServiceType>() { ServiceType.Geolocation };
 
         ServicesManager manager;
-        public EndpointReportController()
+        public EndpointReportController(List<EndpointServiceBase>endpointServices)
         {
-            manager = new ServicesManager();
+            manager = new ServicesManager(endpointServices);
         }
 
         [Route("")]
@@ -32,8 +33,14 @@ namespace Tocci.WebAPI.Controllers
                 //use default
                 request.ServiceTypes = defaultServices;
             }
-            var result = await manager.SendServiceRequests(defaultServices);
-            return null;
+            var result = await manager.SendServiceRequests(request.ServiceTypes);
+
+            return GenerateEndPointReport(result) ;
+        }
+
+        private EndPointReport GenerateEndPointReport(SummaryServiceReport result)
+        {
+            throw new NotImplementedException();
         }
     }
 } 
