@@ -8,6 +8,6 @@ namespace Tocci.Services
 {
     public interface IEndpointDataService
     {
-        Task<ServiceReport> GetEndpointReport();
+        Task<ServiceReport> GetEndpointReport(string endPointAddress, int? endPointPort = null);
     }
 }

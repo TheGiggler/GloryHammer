@@ -59,5 +59,23 @@ namespace Tocci.Services.Models
 
     }
 
+    public class SummaryServiceReport
+    {
+        public string EndPointAddress { get; set; }
+        public int EndPointPort { get; set; }
+        public List<ServiceReport> ServiceReports = new List<ServiceReport>();
+
+    }
+
+    public class ServiceRequest
+    {
+        public string EndpointAddress { get; set; }
+        public int EndpointPort { get; set; }
+
+        public List<ServiceType> ServiceTypes { get; set; }
+
+    }
+
+
 
 }

@@ -25,9 +25,10 @@ namespace Tocci.WebAPI.Controllers
 
         [Route("")]
         [HttpPost]        
-        public async Task<ActionResult<EndPointReport>> CreateEndPointReport([FromBody] EndPointReportRequest request)
+        public async Task<ActionResult<EndPointReport>> CreateEndPointReport([FromBody] EndpointReportRequest request)
         {
             List<serviceModels.ServiceType> services = new List<serviceModels.ServiceType>();
+            var servicesRequest = new serviceModels.ServiceRequest();
 
             if (request.ServiceTypes == null || request.ServiceTypes.Count() == 0)
             {
@@ -36,10 +37,15 @@ namespace Tocci.WebAPI.Controllers
             }
             else
             {
-                //services = MapRequestServicestoServiceType(request.ServiceTypes);
-                services = defaultServices;
+                services = Utilities.MapRequestServicesToServiceType(request.ServiceTypes);
+                //services = defaultServices;
             }
-            var result = await manager.SendServiceRequests(services);
+
+            servicesRequest.ServiceTypes = services;
+            servicesRequest.EndpointAddress = request.EndpointAddress;
+            servicesRequest.EndpointPort = request.EndpointPort;
+            //var serviceRequest = new Models.EndPointReportRequest() { EndPointAddress = request.EndPointAddress, ServiceTypes = endpointServicesRequested };
+            var result = await manager.SendServiceRequests(servicesRequest);
 
             return Utilities.GenerateEndPointReport(result) ;
         }

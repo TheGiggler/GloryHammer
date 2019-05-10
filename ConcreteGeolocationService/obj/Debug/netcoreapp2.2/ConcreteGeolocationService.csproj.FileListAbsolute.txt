@@ -8,3 +8,4 @@ C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug\netcoreapp2.2\ConcreteGeolocationService.AssemblyInfo.cs
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug\netcoreapp2.2\ConcreteGeolocationService.dll
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug\netcoreapp2.2\ConcreteGeolocationService.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug\netcoreapp2.2\ConcreteGeolocationService.csprojAssemblyReference.cache

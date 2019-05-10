@@ -12,7 +12,7 @@ namespace Tocci.Services
         public abstract int ServicePort { get; set; }
         public abstract string Name { get; }
         public abstract Services.Models.ServiceType Type { get;  }
-        public abstract Task<ServiceReport> GetEndpointReport();
+        public abstract Task<ServiceReport> GetEndpointReport(string endPointAddress, int? endPointPort=null);
 
         public EndpointServiceBase() { }
 
