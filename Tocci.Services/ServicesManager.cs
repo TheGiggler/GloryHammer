@@ -38,7 +38,7 @@ namespace Tocci.Services
                     //should we await the call below?
                     var report = await service.GetEndpointReport(serviceRequest.EndpointAddress, serviceRequest.EndpointPort);
                     summary.ServiceReports.Add(report);
-                    System.Threading.Thread.Sleep(5000);
+                    //System.Threading.Thread.Sleep(5000);
                 }
             });
 

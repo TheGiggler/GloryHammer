@@ -22,7 +22,7 @@ namespace Tocci.Services.Concrete
         public override async Task<ServiceReport> GetEndpointReport(string endPointAddress, int? endPointPort = null)
         {
             //fake latency
-            System.Threading.Thread.Sleep(5000);
+            //System.Threading.Thread.Sleep(5000);
             //todo: read grpc params from config file
             //here we'd call grpc service with as-yet-to-be created GRPC Client;
             // GrpcClient.InvokeRPC(new Grpc.GrpcRequest() { ServiceAddress = ServiceAddress, ServicePort = ServicePort });

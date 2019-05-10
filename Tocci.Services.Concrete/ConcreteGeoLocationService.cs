@@ -22,8 +22,8 @@ namespace Tocci.Services.Concrete
         /// <returns></returns>
         public override async Task<ServiceReport> GetEndpointReport(string endPointAddress, int? endPointPort = null)
         {
-            //fake latency
-            System.Threading.Thread.Sleep(5000);
+            ////fake latency
+            //System.Threading.Thread.Sleep(5000);
             //here we'd call grpc service with as-yet-to-be created GRPC Client;
             // GrpcClient.InvokeRPC(new Grpc.GrpcRequest() { ServiceAddress = ServiceAddress, ServicePort = ServicePort });
             return new ServiceReport() { ServiceName = "Some Web geolocation service", Data = "some data", ServiceStatus = ServiceStatus.OK, ServiceType = ServiceType.Geolocation, ServiceAddress = ServiceAddress };

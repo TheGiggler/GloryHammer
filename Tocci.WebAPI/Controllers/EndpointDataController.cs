@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Tocci.Services;
 using Tocci.WebAPI.Models;
 using serviceModels = Tocci.Services.Models;
+using AspNetCoreRateLimit;
+
 
 namespace Tocci.WebAPI.Controllers
 {
@@ -18,13 +20,36 @@ namespace Tocci.WebAPI.Controllers
         List<serviceModels.ServiceType> defaultServices = new List<serviceModels.ServiceType>() { serviceModels.ServiceType.Geolocation, serviceModels.ServiceType.IP };
 
         ServicesManager manager;
-        public EndpointReportController(IEnumerable<EndpointServiceBase>endpointServices)
+        public EndpointReportController(IEnumerable<EndpointServiceBase> endpointServices)
         {
             manager = new ServicesManager(endpointServices);
         }
 
+        ///// <summary>
+        ///// A method to retrieve a stored report by id
+        ///// </summary>
+        ///// <param name="endpointAddress"></param>
+        ///// <param name="endPointPort"></param>
+        ///// <returns></returns>
+        //[Route("")]
+        //[HttpGet]
+        //[ResponseCache(Duration = 30, Location = ResponseCacheLocation.Any)]//set cache much longer as this would be in db and would never change
+        //public async Task<ActionResult<EndPointReport>> GetEndPointReport(string reportID)
+        //{
+        //    var h = HttpContext.Request.Headers;
+        //    var report = new EndPointReport() { ID=reportID};
+        //    return report;
+        //}
+
+        /// <summary>
+        /// This is a POST because we are creating a resource, an EndpointReport
+        /// This could presumably be stored in a db and retrieved by a reportid and or a list by id and/or time range with a GET
+        /// I might do this with mongo if time allows
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [Route("")]
-        [HttpPost]        
+        [HttpPost]
         public async Task<ActionResult<EndPointReport>> CreateEndPointReport([FromBody] EndpointReportRequest request)
         {
             List<serviceModels.ServiceType> services = new List<serviceModels.ServiceType>();
