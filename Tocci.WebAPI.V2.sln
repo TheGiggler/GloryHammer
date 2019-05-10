@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.WebAPI", "Tocci.WebAPI\Tocci.WebAPI.csproj", "{6912E41E-1B3E-45BD-8D4C-2F46C3FA1C79}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Tests.UnitTests", "Tocci.Tests.UnitTests\Tocci.Tests.UnitTests.csproj", "{595FB479-5BF6-4FFC-9F27-686052B378F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Tests.IntegrationTests", "Tocci.Tests.IntegrationTests\Tocci.Tests.IntegrationTests.csproj", "{0099D29A-81AD-4E3E-8C99-2845CB144C96}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Data", "Tocci.Data\Tocci.Data.csproj", "{62F7DB3E-7B46-4293-B790-87EFE7152B7A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services", "Tocci.Services\Tocci.Services.csproj", "{3E5361CF-C8A6-4D91-9FCC-60754932880C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services.Concrete", "Tocci.Services.Concrete\Tocci.Services.Concrete.csproj", "{A710288B-FCEA-4888-830B-114142EC7105}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6912E41E-1B3E-45BD-8D4C-2F46C3FA1C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6912E41E-1B3E-45BD-8D4C-2F46C3FA1C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6912E41E-1B3E-45BD-8D4C-2F46C3FA1C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6912E41E-1B3E-45BD-8D4C-2F46C3FA1C79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{595FB479-5BF6-4FFC-9F27-686052B378F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{595FB479-5BF6-4FFC-9F27-686052B378F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{595FB479-5BF6-4FFC-9F27-686052B378F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{595FB479-5BF6-4FFC-9F27-686052B378F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0099D29A-81AD-4E3E-8C99-2845CB144C96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0099D29A-81AD-4E3E-8C99-2845CB144C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0099D29A-81AD-4E3E-8C99-2845CB144C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0099D29A-81AD-4E3E-8C99-2845CB144C96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62F7DB3E-7B46-4293-B790-87EFE7152B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F7DB3E-7B46-4293-B790-87EFE7152B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F7DB3E-7B46-4293-B790-87EFE7152B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F7DB3E-7B46-4293-B790-87EFE7152B7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E5361CF-C8A6-4D91-9FCC-60754932880C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E5361CF-C8A6-4D91-9FCC-60754932880C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E5361CF-C8A6-4D91-9FCC-60754932880C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E5361CF-C8A6-4D91-9FCC-60754932880C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A710288B-FCEA-4888-830B-114142EC7105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A710288B-FCEA-4888-830B-114142EC7105}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A710288B-FCEA-4888-830B-114142EC7105}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A710288B-FCEA-4888-830B-114142EC7105}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {66D3AE86-23F7-4B3B-91F0-2A6E4F540868}
+	EndGlobalSection
+EndGlobal

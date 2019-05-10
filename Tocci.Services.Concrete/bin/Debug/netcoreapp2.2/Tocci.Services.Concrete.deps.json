@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "Tocci.Services.Concrete/1.0.0": {
+        "dependencies": {
+          "Tocci.Services": "1.0.0"
+        },
+        "runtime": {
+          "Tocci.Services.Concrete.dll": {}
+        }
+      },
+      "Tocci.Data/1.0.0": {
+        "runtime": {
+          "Tocci.Data.dll": {}
+        }
+      },
+      "Tocci.Services/1.0.0": {
+        "dependencies": {
+          "Tocci.Data": "1.0.0"
+        },
+        "runtime": {
+          "Tocci.Services.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Tocci.Services.Concrete/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tocci.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Tocci.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,14 @@
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\bin\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.deps.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\bin\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.runtimeconfig.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\bin\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.runtimeconfig.dev.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\bin\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\bin\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.csprojAssemblyReference.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.csproj.CoreCompileInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.AssemblyInfoInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.AssemblyInfo.cs
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.pdb
