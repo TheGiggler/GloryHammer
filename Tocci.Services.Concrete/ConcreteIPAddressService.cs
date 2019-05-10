@@ -4,10 +4,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Tocci.Services.Models;
 using Tocci.Services.Grpc;
-
 namespace Tocci.Services.Concrete
 {
-    public class ConcreteGeoLocationService:EndpointServiceBase
+    public class ConcreteIPAddressService: EndpointServiceBase
     {
         private string uri, name;
         public override string ServiceAddress { get; set; }
@@ -15,7 +14,7 @@ namespace Tocci.Services.Concrete
         public override ServiceType Type { get { return ServiceType.Geolocation; } }
         public override int ServicePort { get; set; }
 
-        public ConcreteGeoLocationService() { }
+        public ConcreteIPAddressService() { }
 
         /// Call the grpc service
         /// </summary>
@@ -24,7 +23,7 @@ namespace Tocci.Services.Concrete
         {
             //here we'd call grpc service with as-yet-to-be created GRPC Client;
             // GrpcClient.InvokeRPC(new Grpc.GrpcRequest() { ServiceAddress = ServiceAddress, ServicePort = ServicePort });
-            return new ServiceReport() { ServiceName = "Some Web geolocation service", Data = "some data", ServiceStatus = ServiceStatus.OK, ServiceType = ServiceType.Geolocation, ServiceAddress = ServiceAddress };
+            return new ServiceReport() { ServiceName = "Some Web IP service", Data = "some IP data", ServiceStatus = ServiceStatus.OK, ServiceType = ServiceType.IP, ServiceAddress = ServiceAddress };
         }
     }
 }

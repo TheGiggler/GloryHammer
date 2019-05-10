@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,7 +9,14 @@ using Tocci.Services.Models;
 
 namespace Tocci.WebAPI.Models
 {
-
+    public enum ServiceType
+    {
+        Geolocation = 0,
+        ReverseDns = 1,
+        RDAP = 2,
+        Ping = 3,
+        IP = 4
+    }
 
     /// <summary>
     /// The status of an EndPointDataRequest
@@ -29,8 +38,10 @@ namespace Tocci.WebAPI.Models
     {       
         [Required]
         public string EndPointAddress { get; set; }
-
-        public List<ServiceType> ServiceTypes { get; set; }
+        //[JsonConverter(typeof(StringEnumConverter))]
+        public List<ServiceType> ServiceTypes { get; set; }//Was going to use the Tocci.Services.Models.ServiceType type but didn't want to expose implementation details (caller would have 
+                                                      //had to use $type with type and assembly names in body of json POST in order for model to bind
+                                                      //I find that annoying!
 
         //public EndPointDataRequest()
         //{

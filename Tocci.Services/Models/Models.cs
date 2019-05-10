@@ -2,6 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
+
+/// <summary>
+/// I prefer that the API and whatever services it uses only share types when passing data between each other
+/// For instance, the request to the api should not include a type from the Services library, rather it own
+/// The response to the caller should return a type from the api rather than from the Services
+/// This stems from my REST experiences (Resources, Representations), though I hesitate to call this a RESTful API!
+/// This requires mappings back and forth, which should be fairly fast
+/// </summary>
 namespace Tocci.Services.Models
 {
     /// <summary>
@@ -12,7 +20,8 @@ namespace Tocci.Services.Models
         Geolocation = 0,
         ReverseDns = 1,
         RDAP = 2,
-        Ping = 3
+        Ping = 3,
+        IP = 4
     }
 
 
@@ -33,7 +42,7 @@ namespace Tocci.Services.Models
     public struct ServiceReport
     {
         public ServiceType ServiceType { get; set; }
-        public string ServiceUrl { get; set; }
+        public string ServiceAddress { get; set; }
         public string ServiceName { get; set; }
         public string Data { get; set; }
         public ServiceStatus ServiceStatus { get; set; }

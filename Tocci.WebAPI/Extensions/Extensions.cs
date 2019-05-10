@@ -22,7 +22,7 @@ namespace Tocci.WebAPI.Extensions
     ServiceLifetime lifetime = ServiceLifetime.Scoped)
         {
 
-            var typesFromAssemblies = assemblies.SelectMany(a => a.DefinedTypes.Where(x =>!x.IsAbstract && x.IsSubclassOf(typeof(T))));
+            var typesFromAssemblies = assemblies.SelectMany(a => a.DefinedTypes.Where(x =>x.IsSubclassOf(typeof(T))));
             foreach (var type in typesFromAssemblies)
                 services.Add(new ServiceDescriptor(typeof(T), type, lifetime));
         }
