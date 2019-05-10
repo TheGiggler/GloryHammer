@@ -60,17 +60,18 @@ namespace Tocci.WebAPI.Models
     /// </summary>
     public class EndPointReport
     {
-        public string ID { get; set; }
+        public string ReportID { get; set; }
         public string EndPointAddress { get; set; }
         public int EndPointPort { get; set; }
+        public DateTime GeneratedDateTimeUTC { get; set; }
         /// <summary>
         /// List of all returned data from all requested services
         /// </summary>
-        public List<ServiceReport> ServiceResponses { get; set; }
+        public List<ServiceReport> ServiceResponses { get; set; }//really should not be using a type from Services
 
         public EndPointReport()
         {
-            this.ID = Guid.NewGuid().ToString();  //lame way to generate ...would use id from db if actually persisting
+            this.ReportID = Guid.NewGuid().ToString();  //lame way to generate ...would use id from db if actually persisting
         }
 
     }

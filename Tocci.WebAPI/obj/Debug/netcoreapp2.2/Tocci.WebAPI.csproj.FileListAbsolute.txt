@@ -19,3 +19,4 @@ C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.WebAPI\bin\Debug\netcoreapp2.2
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.WebAPI\obj\Debug\netcoreapp2.2\Tocci.WebAPI.csproj.CopyComplete
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.WebAPI\bin\Debug\netcoreapp2.2\Tocci.Services.Concrete.dll
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.WebAPI\bin\Debug\netcoreapp2.2\Tocci.Services.Concrete.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.WebAPI\bin\Debug\netcoreapp2.2\Tocci.WebAPI.xml

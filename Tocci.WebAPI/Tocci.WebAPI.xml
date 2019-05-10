@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tocci.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:Tocci.WebAPI.Controllers.EndpointReportController.CreateEndPointReport(Tocci.WebAPI.Models.EndpointReportRequest)">
+            <summary>
+            This is a POST because we are creating a resource, an EndpointReport
+            This could presumably be stored in a db and retrieved by a reportid and or a list by id and/or time range with a GET
+            I might do this with mongo if time allows
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tocci.WebAPI.Models.Status">
+            <summary>
+            The status of an EndPointDataRequest
+            </summary>
+        </member>
+        <member name="T:Tocci.WebAPI.Models.EndpointReportRequest">
+            <summary>
+            A request for information about an IP address or domain
+            </summary>
+        </member>
+        <member name="T:Tocci.WebAPI.Models.EndPointReport">
+            <summary>
+            A response with details from the requested services
+            </summary>
+        </member>
+        <member name="P:Tocci.WebAPI.Models.EndPointReport.ServiceResponses">
+            <summary>
+            List of all returned data from all requested services
+            </summary>
+        </member>
+        <member name="M:Tocci.WebAPI.Utilities.GenerateEndPointReport(Tocci.Services.Models.SummaryServiceReport)">
+            <summary>
+            Map Services report to WebApi report
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

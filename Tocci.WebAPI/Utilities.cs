@@ -27,7 +27,7 @@ namespace Tocci.WebAPI
             endPointReport.EndPointAddress = result.EndPointAddress;
             endPointReport.EndPointPort = result.EndPointPort;
             endPointReport.ServiceResponses = result.ServiceReports;
-
+            endPointReport.GeneratedDateTimeUTC = DateTime.UtcNow;
             return endPointReport;
 
         }
