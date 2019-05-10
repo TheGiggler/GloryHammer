@@ -18,7 +18,7 @@ namespace Tocci.WebAPI.Controllers
         List<ServiceType> defaultServices = new List<ServiceType>() { ServiceType.Geolocation };
 
         ServicesManager manager;
-        public EndpointReportController(List<EndpointServiceBase>endpointServices)
+        public EndpointReportController(IEnumerable<EndpointServiceBase>endpointServices)
         {
             manager = new ServicesManager(endpointServices);
         }

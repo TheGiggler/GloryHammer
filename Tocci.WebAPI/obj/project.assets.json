@@ -4458,6 +4458,19 @@
         "runtime": {
           "bin/placeholder/Tocci.Services.dll": {}
         }
+      },
+      "Tocci.Services.Concrete/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "Tocci.Services": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Tocci.Services.Concrete.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Tocci.Services.Concrete.dll": {}
+        }
       }
     }
   },
@@ -12094,6 +12107,11 @@
       "type": "project",
       "path": "../Tocci.Services/Tocci.Services.csproj",
       "msbuildProject": "../Tocci.Services/Tocci.Services.csproj"
+    },
+    "Tocci.Services.Concrete/1.0.0": {
+      "type": "project",
+      "path": "../Tocci.Services.Concrete/Tocci.Services.Concrete.csproj",
+      "msbuildProject": "../Tocci.Services.Concrete/Tocci.Services.Concrete.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12102,7 +12120,8 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Tocci.Data >= 1.0.0",
-      "Tocci.Services >= 1.0.0"
+      "Tocci.Services >= 1.0.0",
+      "Tocci.Services.Concrete >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12139,6 +12158,9 @@
           "projectReferences": {
             "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Data\\Tocci.Data.csproj": {
               "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Data\\Tocci.Data.csproj"
+            },
+            "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\Tocci.Services.Concrete.csproj": {
+              "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\Tocci.Services.Concrete.csproj"
             },
             "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services\\Tocci.Services.csproj": {
               "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services\\Tocci.Services.csproj"

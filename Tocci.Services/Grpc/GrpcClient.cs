@@ -12,7 +12,7 @@ namespace Tocci.Services.Grpc
     public class GrpcRequest
     {
         public string ServiceAddress { get; set; }
-        public string ServicePort { get; set; }
+        public int ServicePort { get; set; }
     }
 
    

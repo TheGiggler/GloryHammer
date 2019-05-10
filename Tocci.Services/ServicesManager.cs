@@ -22,9 +22,10 @@ namespace Tocci.Services
         List<EndpointServiceBase> _endpointServices; //services injected in constructor
         SummaryServiceReport _report;
 
-        public ServicesManager(List<EndpointServiceBase>endpointServices)
+        public ServicesManager(IEnumerable<EndpointServiceBase>endpointServices)
         {
-            _endpointServices = endpointServices;
+            _endpointServices = new List<EndpointServiceBase>(endpointServices);
+           
             _report = new SummaryServiceReport();
         }
 

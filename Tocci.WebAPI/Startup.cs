@@ -9,8 +9,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Tocci.Services;
+using Tocci.Services.Concrete;
+using Tocci.WebAPI.Extensions;
 
-namespace 
+namespace Tocci.WebAPI
 
 {
     public class Startup
@@ -18,6 +21,7 @@ namespace
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            var b = new ConcreteGeoLocationService();
         }
 
         public IConfiguration Configuration { get; }
@@ -30,7 +34,10 @@ namespace
             //Load service dependecies and put in a List that can be injected
 
 
-            //this is a tad unusual.  I want to inject the configured
+            //this is a tad unusual.  I want to inject the configured services as a collection that can be iterated over
+            //not as a long list of parameters I hate long method signatures!
+
+            services.RegisterAllTypes<EndpointServiceBase>(AppDomain.CurrentDomain.GetAssemblies() );
 
         }
 
