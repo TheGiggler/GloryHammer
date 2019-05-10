@@ -10,20 +10,21 @@ using Tocci.WebAPI.Models;
 namespace Tocci.WebAPI.Controllers
 {
     [Produces("application/json")]
-    [Route("api/EndpointData")]
-    public class EndpointDataController : Controller
+    [Route("api/EndpointReport")]
+    [ApiController]
+    public class EndpointReportController : Controller
     {
-        List<ServiceType> defaultServices = new List<ServiceType>() { ServiceType.Geolocation, ServiceType.Ping };
+        List<ServiceType> defaultServices = new List<ServiceType>() { ServiceType.Geolocation };
 
         ServicesManager manager;
-        public EndpointDataController()
+        public EndpointReportController()
         {
             manager = new ServicesManager();
         }
 
         [Route("")]
-        [HttpGet]
-        public async Task<ActionResult<EndPointDataResponse>> GetEndPointData(EndPointDataRequest request)
+        [HttpPost]        
+        public async Task<ActionResult<EndPointReport>> CreateEndPointReport([FromBody] EndPointReportRequest request)
         {
 
             if (request.ServiceTypes == null || request.ServiceTypes.Count() == 0)
@@ -31,7 +32,7 @@ namespace Tocci.WebAPI.Controllers
                 //use default
                 request.ServiceTypes = defaultServices;
             }
-            var result = await manager.SendServiceRequests(null);
+            var result = await manager.SendServiceRequests(defaultServices);
             return null;
         }
     }

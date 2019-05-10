@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -42,9 +43,11 @@ namespace Tocci.WebAPI.Models
     /// <summary>
     /// A request for information about an IP address or domain
     /// </summary>
-    public class EndPointDataRequest
+    public class EndPointReportRequest
     {       
-        public string EndPoint { get; set; }
+        [Required]
+        public string EndPointAddress { get; set; }
+
         public List<ServiceType> ServiceTypes { get; set; }
 
         //public EndPointDataRequest()
@@ -58,7 +61,7 @@ namespace Tocci.WebAPI.Models
     /// <summary>
     /// A response with details from the requested services
     /// </summary>
-    public class EndPointDataResponse
+    public class EndPointReport
     {
         /// <summary>
         /// If the service has ab address of some sort, this is it
@@ -83,4 +86,6 @@ namespace Tocci.WebAPI.Models
         public ServiceStatus ServiceStatus { get; set; }
 
     }
+
+
 }
