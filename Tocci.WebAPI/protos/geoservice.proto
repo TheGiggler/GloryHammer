@@ -7,7 +7,7 @@ service EndpointReportingService {
   rpc GetReport (EndpointDataRequest) returns (EndPointDataResponse) {}
 }
 
-
+// The request message containing the user's name.
 message EndpointDataRequest {
   string endpoint = 1;
   string id = 2;

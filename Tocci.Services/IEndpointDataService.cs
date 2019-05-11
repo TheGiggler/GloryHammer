@@ -8,6 +8,6 @@ namespace Tocci.Services
 {
     public interface IEndpointDataServiceProxy
     {
-        Task<ServiceReport> GetEndpointReport(string endPointAddress, int? endPointPort = null);
+        Task<ServiceReport> GetEndpointReport(string endPointAddress, string reportID, int? endPointPort = null);
     }
 }

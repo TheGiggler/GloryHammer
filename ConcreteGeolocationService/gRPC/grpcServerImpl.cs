@@ -25,6 +25,8 @@ namespace GrpcGeolocationService.gRPC
         }
         public override async Task<EndPointDataResponse> GetReport(EndpointDataRequest request, ServerCallContext context)
         {
+
+            Console.WriteLine($"Request received at {DateTime.UtcNow}: {request.Endpoint} ... id={request.Id}...");
             EndPointDataResponse response = new EndPointDataResponse() { Status = Geo.Status.Failed };
             var fetch = await NetworkService.FetchEndpointData(serviceSettings.GeoServiceUrl, serviceSettings.GeoServiceApiKey, request.Endpoint);
 
@@ -32,6 +34,7 @@ namespace GrpcGeolocationService.gRPC
             {
                 response.Status = Geo.Status.Success;
                 response.Endpointdata = JsonConvert.SerializeObject(fetch.Data);
+                response.Id = request.Id;
             }
             return response;
 

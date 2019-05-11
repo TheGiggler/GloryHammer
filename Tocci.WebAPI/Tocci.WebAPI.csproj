@@ -10,7 +10,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="protos\**" />
+    <Content Remove="protos\**" />
+    <EmbeddedResource Remove="protos\**" />
+    <None Remove="protos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AspNetCoreRateLimit" Version="3.0.4" />
+    <PackageReference Include="Grpc" Version="1.20.1" />
+    <PackageReference Include="Grpc.Core" Version="1.20.1" />
+    <PackageReference Include="Grpc.Tools" Version="1.20.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
@@ -21,5 +34,7 @@
     <ProjectReference Include="..\Tocci.Services.Concrete\Tocci.Services.Proxy.csproj" />
     <ProjectReference Include="..\Tocci.Services\Tocci.Services.csproj" />
   </ItemGroup>
-
+  <ItemGroup>
+    <None Remove="@(Protobuf)" />
+  </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -6,6 +6,24 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Tocci.Services\Tocci.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="protos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="protos\geoservice.proto" GrpcServices="Client" Generator="MSBuild:Compile" />
+    <Content Include="protos\geoservice.proto" />
+    <None Remove="@(Protobuf)" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.7.0" />
+    <PackageReference Include="Grpc" Version="1.20.1" />
+    <PackageReference Include="Grpc.Core" Version="1.20.1" />
+    <PackageReference Include="Grpc.Tools" Version="1.20.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>

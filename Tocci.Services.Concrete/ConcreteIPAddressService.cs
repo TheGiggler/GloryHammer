@@ -6,7 +6,7 @@ using Tocci.Services.Models;
 using Tocci.Services.Grpc;
 namespace Tocci.Services.Concrete
 {
-    public class ConcreteIPAddressService: EndpointServiceBaseProxy
+    public class ConcreteIPAddressService: EndpointServiceProxyBase
     {
         private string uri, name;
         public override string ServiceAddress { get; set; }
@@ -19,7 +19,7 @@ namespace Tocci.Services.Concrete
         /// Call the grpc service
         /// </summary>
         /// <returns></returns>
-        public override async Task<ServiceReport> GetEndpointReport(string endPointAddress, int? endPointPort = null)
+        public override async Task<ServiceReport> GetEndpointReport(string endPointAddress, string reportID, int? endPointPort = null)
         {
             //fake latency
             //System.Threading.Thread.Sleep(5000);

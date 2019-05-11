@@ -22,11 +22,11 @@ namespace GrpcGeolocationService
 
         static void Main(string[] args)
         {
-            if (args.Length < 1)
-            {
-                throw new ArgumentNullException("endpoint","Missing endpoint argument");
-            }
-            endpointToTest = args[0];
+            //if (args.Length < 1)
+            //{
+            //    throw new ArgumentNullException("endpoint","Missing endpoint argument");
+            //}
+            //endpointToTest = args[0];
             //TODO test for missing
             settings = LoadSettingsFromConfig();
 
