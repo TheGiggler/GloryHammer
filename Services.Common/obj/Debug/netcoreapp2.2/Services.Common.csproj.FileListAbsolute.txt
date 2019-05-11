@@ -1,0 +1,8 @@
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\bin\Debug\netcoreapp2.2\Services.Common.deps.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\bin\Debug\netcoreapp2.2\Services.Common.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\bin\Debug\netcoreapp2.2\Services.Common.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\obj\Debug\netcoreapp2.2\Services.Common.csproj.CoreCompileInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\obj\Debug\netcoreapp2.2\Services.Common.AssemblyInfoInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\obj\Debug\netcoreapp2.2\Services.Common.AssemblyInfo.cs
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\obj\Debug\netcoreapp2.2\Services.Common.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\obj\Debug\netcoreapp2.2\Services.Common.pdb

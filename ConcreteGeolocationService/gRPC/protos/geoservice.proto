@@ -13,7 +13,7 @@ message EndpointDataRequest {
   string id = 2;
 }
 
-// The response message containing the greetings.
+// The response message with the data
 message EndPointDataResponse {
   string message = 1;
   string endpointdata = 2;

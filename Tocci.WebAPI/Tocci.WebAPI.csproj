@@ -30,9 +30,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Tocci.Data\Tocci.Data.csproj" />
     <ProjectReference Include="..\Tocci.Services.Concrete\Tocci.Services.Proxy.csproj" />
-    <ProjectReference Include="..\Tocci.Services\Tocci.Services.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="@(Protobuf)" />

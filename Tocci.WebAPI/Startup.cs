@@ -24,7 +24,7 @@ namespace Tocci.WebAPI
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            var b = new ConcreteGeoLocationService();
+            var b = new GeolocationServiceProxy();
         }
 
         public IConfiguration Configuration { get; }

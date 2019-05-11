@@ -209,7 +209,7 @@ namespace Geo {
   }
 
   /// <summary>
-  /// The response message containing the greetings.
+  /// The response message with the data
   /// </summary>
   public sealed partial class EndPointDataResponse : pb::IMessage<EndPointDataResponse> {
     private static readonly pb::MessageParser<EndPointDataResponse> _parser = new pb::MessageParser<EndPointDataResponse>(() => new EndPointDataResponse());

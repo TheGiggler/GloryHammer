@@ -1,0 +1,2 @@
+obj\Debug\netcoreapp2.2/Pingservice.cs \
+obj\Debug\netcoreapp2.2/PingserviceGrpc.cs: gRPC/protos/pingservice.proto

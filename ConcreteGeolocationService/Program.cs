@@ -2,7 +2,7 @@
 using System.Collections.Specialized;
 using System.Configuration;
 using GrpcGeolocationService.Network;
-using Nito.AsyncEx.Synchronous;
+//using Nito.AsyncEx.Synchronous;
 using GrpcGeolocationService.Models;
 using Grpc.Core;
 using Geo;

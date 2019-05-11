@@ -40,20 +40,20 @@ namespace GrpcGeolocationService.gRPC
 
         }
 
-        private static string GetIpAddressFromDomain(string endpoint)
-        {
-            IPAddress[] ips = Dns.GetHostAddresses(endpoint);
-            //this can return multiples... just take the first for our purposes
-            if (ips.Length > 0)
-            {
-                return ips[0].ToString();
-            }
-            else
-            {
-                throw new ArgumentException("Valid domain or IP address was not submitted.");
-            }
+        //private static string GetIpAddressFromDomain(string endpoint)
+        //{
+        //    IPAddress[] ips = Dns.GetHostAddresses(endpoint);
+        //    //this can return multiples... just take the first for our purposes
+        //    if (ips.Length > 0)
+        //    {
+        //        return ips[0].ToString();
+        //    }
+        //    else
+        //    {
+        //        throw new ArgumentException("Valid domain or IP address was not submitted.");
+        //    }
 
 
-        }
+        //}
     }
 }

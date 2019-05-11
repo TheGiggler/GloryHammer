@@ -9,15 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Tests.UnitTests", "To
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Tests.IntegrationTests", "Tocci.Tests.IntegrationTests\Tocci.Tests.IntegrationTests.csproj", "{0099D29A-81AD-4E3E-8C99-2845CB144C96}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Data", "Tocci.Data\Tocci.Data.csproj", "{62F7DB3E-7B46-4293-B790-87EFE7152B7A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services", "Tocci.Services\Tocci.Services.csproj", "{3E5361CF-C8A6-4D91-9FCC-60754932880C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services.Proxy", "Tocci.Services.Concrete\Tocci.Services.Proxy.csproj", "{A710288B-FCEA-4888-830B-114142EC7105}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FBADF037-E609-4B23-BA5A-5C6FFA543EDA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcGeolocationService", "ConcreteGeolocationService\GrpcGeolocationService.csproj", "{D639B972-DEBF-45DA-BF82-155CBF9F867F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcPingService", "GrpcPingService\GrpcPingService.csproj", "{61758728-87FA-4305-A80B-E1B4B8DD2E78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Common", "Services.Common\Services.Common.csproj", "{80621A28-E65B-460D-90EC-464BEABE942B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services", "Tocci.Services\Tocci.Services.csproj", "{75F9087C-9A45-491A-BD5E-B33CDA4CCB03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,14 +39,6 @@ Global
 		{0099D29A-81AD-4E3E-8C99-2845CB144C96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0099D29A-81AD-4E3E-8C99-2845CB144C96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0099D29A-81AD-4E3E-8C99-2845CB144C96}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62F7DB3E-7B46-4293-B790-87EFE7152B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62F7DB3E-7B46-4293-B790-87EFE7152B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62F7DB3E-7B46-4293-B790-87EFE7152B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62F7DB3E-7B46-4293-B790-87EFE7152B7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3E5361CF-C8A6-4D91-9FCC-60754932880C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E5361CF-C8A6-4D91-9FCC-60754932880C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3E5361CF-C8A6-4D91-9FCC-60754932880C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3E5361CF-C8A6-4D91-9FCC-60754932880C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A710288B-FCEA-4888-830B-114142EC7105}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A710288B-FCEA-4888-830B-114142EC7105}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A710288B-FCEA-4888-830B-114142EC7105}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,12 +47,26 @@ Global
 		{D639B972-DEBF-45DA-BF82-155CBF9F867F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D639B972-DEBF-45DA-BF82-155CBF9F867F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D639B972-DEBF-45DA-BF82-155CBF9F867F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61758728-87FA-4305-A80B-E1B4B8DD2E78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61758728-87FA-4305-A80B-E1B4B8DD2E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61758728-87FA-4305-A80B-E1B4B8DD2E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61758728-87FA-4305-A80B-E1B4B8DD2E78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80621A28-E65B-460D-90EC-464BEABE942B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80621A28-E65B-460D-90EC-464BEABE942B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80621A28-E65B-460D-90EC-464BEABE942B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80621A28-E65B-460D-90EC-464BEABE942B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F9087C-9A45-491A-BD5E-B33CDA4CCB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F9087C-9A45-491A-BD5E-B33CDA4CCB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F9087C-9A45-491A-BD5E-B33CDA4CCB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F9087C-9A45-491A-BD5E-B33CDA4CCB03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D639B972-DEBF-45DA-BF82-155CBF9F867F} = {FBADF037-E609-4B23-BA5A-5C6FFA543EDA}
+		{61758728-87FA-4305-A80B-E1B4B8DD2E78} = {FBADF037-E609-4B23-BA5A-5C6FFA543EDA}
+		{80621A28-E65B-460D-90EC-464BEABE942B} = {FBADF037-E609-4B23-BA5A-5C6FFA543EDA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66D3AE86-23F7-4B3B-91F0-2A6E4F540868}

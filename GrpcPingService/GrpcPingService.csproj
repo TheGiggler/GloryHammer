@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="gRPC\protos\pingservice.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="gRPC\protos\pingservice.proto" />
+  </ItemGroup>
+  <ItemGroup>
+    <Protobuf Include="gRPC\protos\pingservice.proto" GrpcServices="Server" Generator="MSBuild:Compile" />
+    <Content Include="gRPC\protos\pingservice.proto" />
+    <None Remove="@(Protobuf)" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.7.0" />
+    <PackageReference Include="Grpc" Version="1.20.1" />
+    <PackageReference Include="Grpc.Core" Version="1.20.1" />
+    <PackageReference Include="Grpc.Tools" Version="1.20.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Polly" Version="7.1.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+
+</Project>

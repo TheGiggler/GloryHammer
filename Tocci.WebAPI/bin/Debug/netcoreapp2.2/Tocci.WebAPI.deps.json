@@ -32,8 +32,6 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Swashbuckle.AspNetCore": "4.0.1",
-          "Tocci.Data": "1.0.0",
-          "Tocci.Services": "1.0.0",
           "Tocci.Services.Proxy": "1.0.0"
         },
         "runtime": {
@@ -404,14 +402,6 @@
         },
         "compile": {
           "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
-        }
-      },
-      "Tocci.Data/1.0.0": {
-        "runtime": {
-          "Tocci.Data.dll": {}
-        },
-        "compile": {
-          "Tocci.Data.dll": {}
         }
       },
       "Tocci.Services/1.0.0": {
@@ -3570,11 +3560,6 @@
       "sha512": "sha512-d2U7NyV0e4UhyCzAVK9QHm0iz2QoVPUa9XzJ/Gr0rn/jBZWFpVLvigKv0vxFzO2E793sY605+4h885gvCdKSxQ==",
       "path": "swashbuckle.aspnetcore.swaggerui/4.0.1",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.4.0.1.nupkg.sha512"
-    },
-    "Tocci.Data/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "Tocci.Services/1.0.0": {
       "type": "project",

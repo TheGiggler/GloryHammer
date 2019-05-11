@@ -27,4 +27,6 @@ namespace GrpcGeolocationService.Models
         public int ListenPort { get; set; }
     }
 
+
+
 }
