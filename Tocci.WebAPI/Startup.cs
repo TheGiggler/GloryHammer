@@ -73,7 +73,7 @@ namespace Tocci.WebAPI
             //this is a tad unusual.  I want to inject the configured services as a collection that can be iterated over
             //not as a long list of parameters I hate long method signatures!
 
-            services.RegisterAllTypes<EndpointServiceBase>(AppDomain.CurrentDomain.GetAssemblies() );
+            services.RegisterAllTypes<EndpointServiceBaseProxy>(AppDomain.CurrentDomain.GetAssemblies() );
 
         }
 

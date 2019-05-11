@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConcreteGeolocationService.Network
+namespace GrpcGeolocationService.Network.Models
 {
     public class Language
     {

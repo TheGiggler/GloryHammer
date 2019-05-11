@@ -4531,17 +4531,17 @@
           "bin/placeholder/Tocci.Services.dll": {}
         }
       },
-      "Tocci.Services.Concrete/1.0.0": {
+      "Tocci.Services.Proxy/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Tocci.Services": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Tocci.Services.Concrete.dll": {}
+          "bin/placeholder/Tocci.Services.Proxy.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Tocci.Services.Concrete.dll": {}
+          "bin/placeholder/Tocci.Services.Proxy.dll": {}
         }
       }
     }
@@ -12243,10 +12243,10 @@
       "path": "../Tocci.Services/Tocci.Services.csproj",
       "msbuildProject": "../Tocci.Services/Tocci.Services.csproj"
     },
-    "Tocci.Services.Concrete/1.0.0": {
+    "Tocci.Services.Proxy/1.0.0": {
       "type": "project",
-      "path": "../Tocci.Services.Concrete/Tocci.Services.Concrete.csproj",
-      "msbuildProject": "../Tocci.Services.Concrete/Tocci.Services.Concrete.csproj"
+      "path": "../Tocci.Services.Concrete/Tocci.Services.Proxy.csproj",
+      "msbuildProject": "../Tocci.Services.Concrete/Tocci.Services.Proxy.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -12258,7 +12258,7 @@
       "Swashbuckle.AspNetCore >= 4.0.1",
       "Tocci.Data >= 1.0.0",
       "Tocci.Services >= 1.0.0",
-      "Tocci.Services.Concrete >= 1.0.0"
+      "Tocci.Services.Proxy >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -12296,8 +12296,8 @@
             "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Data\\Tocci.Data.csproj": {
               "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Data\\Tocci.Data.csproj"
             },
-            "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\Tocci.Services.Concrete.csproj": {
-              "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\Tocci.Services.Concrete.csproj"
+            "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\Tocci.Services.Proxy.csproj": {
+              "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\Tocci.Services.Proxy.csproj"
             },
             "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services\\Tocci.Services.csproj": {
               "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services\\Tocci.Services.csproj"

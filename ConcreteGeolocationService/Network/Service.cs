@@ -5,8 +5,9 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Net;
+using GrpcGeolocationService.Network.Models;
 
-namespace ConcreteGeolocationService.Network
+namespace GrpcGeolocationService.Network
 {
     internal class NetworkService
     {

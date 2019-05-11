@@ -1,0 +1,2 @@
+obj\Debug\netcoreapp2.2/Geoservice.cs \
+obj\Debug\netcoreapp2.2/GeoserviceGrpc.cs: proto/geoservice.proto

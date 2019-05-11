@@ -20,7 +20,7 @@ namespace Tocci.WebAPI.Controllers
         List<serviceModels.ServiceType> defaultServices = new List<serviceModels.ServiceType>() { serviceModels.ServiceType.Geolocation, serviceModels.ServiceType.IP };
 
         ServicesManager manager;
-        public EndpointReportController(IEnumerable<EndpointServiceBase> endpointServices)
+        public EndpointReportController(IEnumerable<EndpointServiceBaseProxy> endpointServices)
         {
             manager = new ServicesManager(endpointServices);
         }

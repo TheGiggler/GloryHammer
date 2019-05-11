@@ -6,7 +6,7 @@ using Tocci.Services.Models;
 using Tocci.Services.Grpc;
 namespace Tocci.Services.Concrete
 {
-    public class ConcreteIPAddressService: EndpointServiceBase
+    public class ConcreteIPAddressService: EndpointServiceBaseProxy
     {
         private string uri, name;
         public override string ServiceAddress { get; set; }

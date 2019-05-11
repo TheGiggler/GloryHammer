@@ -708,9 +708,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\Tocci.Services.Concrete.csproj",
-      "projectName": "Tocci.Services.Concrete",
-      "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\Tocci.Services.Concrete.csproj",
+      "projectUniqueName": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\Tocci.Services.Proxy.csproj",
+      "projectName": "Tocci.Services.Proxy",
+      "projectPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\Tocci.Services.Proxy.csproj",
       "packagesPath": "C:\\Users\\mctoc\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\mctoc\\source\\repos\\Tocci.WebAPI.V2\\Tocci.Services.Concrete\\obj\\",
       "projectStyle": "PackageReference",

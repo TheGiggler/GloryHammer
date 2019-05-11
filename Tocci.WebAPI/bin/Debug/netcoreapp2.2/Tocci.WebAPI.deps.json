@@ -31,7 +31,7 @@
           "Swashbuckle.AspNetCore": "4.0.1",
           "Tocci.Data": "1.0.0",
           "Tocci.Services": "1.0.0",
-          "Tocci.Services.Concrete": "1.0.0"
+          "Tocci.Services.Proxy": "1.0.0"
         },
         "runtime": {
           "Tocci.WebAPI.dll": {}
@@ -338,15 +338,15 @@
           "Tocci.Services.dll": {}
         }
       },
-      "Tocci.Services.Concrete/1.0.0": {
+      "Tocci.Services.Proxy/1.0.0": {
         "dependencies": {
           "Tocci.Services": "1.0.0"
         },
         "runtime": {
-          "Tocci.Services.Concrete.dll": {}
+          "Tocci.Services.Proxy.dll": {}
         },
         "compile": {
-          "Tocci.Services.Concrete.dll": {}
+          "Tocci.Services.Proxy.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3459,7 +3459,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Tocci.Services.Concrete/1.0.0": {
+    "Tocci.Services.Proxy/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,0 +1,27 @@
+﻿syntax = "proto3";
+
+package Geo;
+
+service EndpointReportingService {
+
+  rpc GetReport (EndpointDataRequest) returns (EndPointDataResponse) {}
+}
+
+// The request message containing the user's name.
+message EndpointDataRequest {
+  string endpoint = 1;
+}
+
+// The response message containing the greetings.
+message EndPointDataResponse {
+  string message = 1;
+  string endpointdata = 2;
+  Status status = 3;
+
+}
+
+ enum Status {
+    SUCCESS = 0;
+    FAILED = 1;
+
+  }

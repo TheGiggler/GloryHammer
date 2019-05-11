@@ -10,12 +10,12 @@ namespace Tocci.Services
     //class to manage the various configured and requested services, fan out requests, fan in results
     public class ServicesManager
     {
-        List<EndpointServiceBase> _endpointServices; //services injected in constructor
+        List<EndpointServiceBaseProxy> _endpointServices; //services injected in constructor
         SummaryServiceReport _report;
 
-        public ServicesManager(IEnumerable<EndpointServiceBase>endpointServices)
+        public ServicesManager(IEnumerable<EndpointServiceBaseProxy>endpointServices)
         {
-            _endpointServices = new List<EndpointServiceBase>(endpointServices);
+            _endpointServices = new List<EndpointServiceBaseProxy>(endpointServices);
            
             _report = new SummaryServiceReport();
         }

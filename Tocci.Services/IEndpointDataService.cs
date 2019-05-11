@@ -6,7 +6,7 @@ using Tocci.Services.Models;
 
 namespace Tocci.Services
 {
-    public interface IEndpointDataService
+    public interface IEndpointDataServiceProxy
     {
         Task<ServiceReport> GetEndpointReport(string endPointAddress, int? endPointPort = null);
     }

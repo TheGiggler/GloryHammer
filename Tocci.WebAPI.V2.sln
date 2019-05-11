@@ -13,11 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Data", "Tocci.Data\To
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services", "Tocci.Services\Tocci.Services.csproj", "{3E5361CF-C8A6-4D91-9FCC-60754932880C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services.Concrete", "Tocci.Services.Concrete\Tocci.Services.Concrete.csproj", "{A710288B-FCEA-4888-830B-114142EC7105}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services.Proxy", "Tocci.Services.Concrete\Tocci.Services.Proxy.csproj", "{A710288B-FCEA-4888-830B-114142EC7105}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FBADF037-E609-4B23-BA5A-5C6FFA543EDA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConcreteGeolocationService", "ConcreteGeolocationService\ConcreteGeolocationService.csproj", "{D639B972-DEBF-45DA-BF82-155CBF9F867F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcGeolocationService", "ConcreteGeolocationService\GrpcGeolocationService.csproj", "{D639B972-DEBF-45DA-BF82-155CBF9F867F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -7,7 +7,7 @@ using Tocci.Services.Grpc;
 
 namespace Tocci.Services.Concrete
 {
-    public class ConcreteGeoLocationService:EndpointServiceBase
+    public class ConcreteGeoLocationService:EndpointServiceBaseProxy
     {
         private string uri, name;
         public override string ServiceAddress { get; set; }

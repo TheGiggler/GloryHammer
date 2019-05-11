@@ -1,0 +1,12 @@
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug\netcoreapp2.2\GrpcGeolocationService.csproj.CoreCompileInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug\netcoreapp2.2\GrpcGeolocationService.AssemblyInfoInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug\netcoreapp2.2\GrpcGeolocationService.AssemblyInfo.cs
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\bin\Debug\netcoreapp2.2\GrpcGeolocationService.dll.config
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\bin\Debug\netcoreapp2.2\GrpcGeolocationService.deps.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\bin\Debug\netcoreapp2.2\GrpcGeolocationService.runtimeconfig.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\bin\Debug\netcoreapp2.2\GrpcGeolocationService.runtimeconfig.dev.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\bin\Debug\netcoreapp2.2\GrpcGeolocationService.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug\netcoreapp2.2\GrpcGeolocationService.csprojAssemblyReference.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\bin\Debug\netcoreapp2.2\GrpcGeolocationService.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug\netcoreapp2.2\GrpcGeolocationService.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\obj\Debug\netcoreapp2.2\GrpcGeolocationService.pdb
