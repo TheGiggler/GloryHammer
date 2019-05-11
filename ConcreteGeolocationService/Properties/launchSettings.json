@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConcreteGeolocationService": {
+      "commandName": "Project",
+      "commandLineArgs": "www.mlb.com"
+    }
+  }
+}
