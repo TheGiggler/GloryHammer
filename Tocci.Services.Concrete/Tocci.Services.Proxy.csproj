@@ -8,8 +8,10 @@
     <Content Include="protos\geoservice.proto" />
     <Protobuf Include="protos\pingservice.proto" GrpcServices="Client" Generator="MSBuild:Compile" />
     <Content Include="protos\pingservice.proto" />
+    <Protobuf Include="protos\reversednsservice.proto" GrpcServices="Client" Generator="MSBuild:Compile" />
+    <Content Include="protos\reversednsservice.proto" />
     <None Remove="@(Protobuf)" />
-    <None Remove="protos\pingservice.proto" />
+
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.7.0" />
@@ -19,6 +21,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Tocci.Services\Tocci.Services.csproj" />

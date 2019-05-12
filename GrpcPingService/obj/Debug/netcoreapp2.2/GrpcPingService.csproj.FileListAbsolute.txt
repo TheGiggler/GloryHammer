@@ -8,5 +8,5 @@ C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Debug\netcoreapp
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Debug\netcoreapp2.2\GrpcPingService.AssemblyInfo.cs
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Debug\netcoreapp2.2\GrpcPingService.dll
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Debug\netcoreapp2.2\GrpcPingService.pdb
-C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Debug\netcoreapp2.2\GrpcPingService.csprojAssemblyReference.cache
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\bin\Debug\netcoreapp2.2\GrpcPingService.dll.config
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Debug\netcoreapp2.2\GrpcPingService.csprojAssemblyReference.cache

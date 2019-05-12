@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Tocci.Services.Models;
-using Tocci.Services.Grpc;
 using Grpc.Core;
 using Ping;
+using System.Configuration;
+using Tocci.Services.Proxy.Models;
 
 namespace Tocci.Services.Proxy
 {
@@ -17,18 +18,40 @@ namespace Tocci.Services.Proxy
         public override ServiceType Type { get { return ServiceType.Ping; } }
         public override int ServicePort { get; set; }
 
+        string grpcAddress;
+        int grpcPort;
+        public PingServiceProxy()// (GrpcConnectionSettings settings)
+        {
+            //var setting = settings.Settings.Find(s => s.ServiceType == ServiceType.Ping);
+
+            ////TODO handle missing settings
+
+            //grpcAddress = setting.RemoteHostAddress;
+            //grpcPort = setting.RemoteHostPort;
+
+            //grpcAddress += ":" + grpcPort;
+        }
         /// Call the grpc service
         /// </summary>
         /// <returns></returns>
         public override async Task<ServiceReport> GetEndpointReport(string endPointAddress, string reportID, int? endPointPort = null)
         {
-            //TODO READ FROM CONFIG
+            EndPointDataResponse response = new EndPointDataResponse(); 
             Channel channel = new Channel("127.0.0.1:8000", ChannelCredentials.Insecure);
             var client = new Ping.PingService.PingServiceClient(channel);
             var request = new EndpointDataRequest() { Endpoint = endPointAddress, Id = reportID };
-            var response = client.GetReport(request);
+            try
+            {
+                response = client.GetReport(request);
+                return new ServiceReport() { ServiceName = "Remote Ping Service", Data = response.Endpointdata, ServiceStatus = ServiceStatus.OK, ServiceType = ServiceType.Ping, ServiceAddress = ServiceAddress };
 
-            return new ServiceReport() { ServiceName = "Remote Ping Service", Data = response.Endpointdata, ServiceStatus = ServiceStatus.OK, ServiceType = ServiceType.Geolocation, ServiceAddress = ServiceAddress };
-        }
+            }
+            catch (Exception ex)
+            {
+                return new ServiceReport() { ServiceName = "Remote Ping Service", Data = response.Endpointdata, ServiceStatus = ServiceStatus.Error, ServiceType = ServiceType.Ping, ServiceAddress = ServiceAddress };
+
+            }
+
+           }
     }
 }

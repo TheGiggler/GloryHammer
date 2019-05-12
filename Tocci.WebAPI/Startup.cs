@@ -15,6 +15,7 @@ using Tocci.Services;
 using Tocci.Services.Concrete;
 using Tocci.WebAPI.Extensions;
 using Swashbuckle.AspNetCore.Swagger;
+using Tocci.Services.Proxy.Models;
 
 namespace Tocci.WebAPI
 
@@ -34,7 +35,7 @@ namespace Tocci.WebAPI
         {
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+                c.SwaggerDoc("v1", new Info { Title = "Tocci API", Version = "v1" });
             });
 
             #region rate limiting
@@ -70,6 +71,11 @@ namespace Tocci.WebAPI
 
             services.RegisterAllTypes<EndpointServiceProxyBase>(AppDomain.CurrentDomain.GetAssemblies() );
 
+
+            //inject remote service settings from settings file
+            var cf = Configuration.GetSection("GrpcConnectionSettings:Settings");
+            services.Configure<GrpcConnectionSettings>(Configuration.GetSection("GrpcConnectionSettings"));
+            var myArray = Configuration.GetSection("GrpcConnectionSettings").GetChildren();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,6 +17,7 @@ namespace Tocci.Services.Models
     /// <summary>
     /// The services available
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ServiceType
     {
         Geolocation = 0,
@@ -28,6 +31,7 @@ namespace Tocci.Services.Models
     /// <summary>
     /// The status of a service
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ServiceStatus
     {
         OK = 0,
@@ -75,6 +79,7 @@ namespace Tocci.Services.Models
         public List<ServiceType> ServiceTypes { get; set; }
 
     }
+
 
 
 

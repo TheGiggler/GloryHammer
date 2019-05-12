@@ -9,6 +9,7 @@ using Tocci.Services.Models;
 
 namespace Tocci.WebAPI.Models
 {
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum ServiceType
     {
         Geolocation = 0,
@@ -21,6 +22,7 @@ namespace Tocci.WebAPI.Models
     /// <summary>
     /// The status of an EndPointDataRequest
     /// </summary>
+    [JsonConverter(typeof(StringEnumConverter))]
     public enum Status
     {
         //Everything went as planned

@@ -1,0 +1,29 @@
+﻿syntax = "proto3";
+
+package ReverseDns;
+
+service ReverseDnsService {
+
+  rpc GetReport (EndpointDataRequest) returns (EndPointDataResponse) {}
+}
+
+
+message EndpointDataRequest {
+  string endpoint = 1;
+  string id = 2;
+}
+
+// The response message with the data
+message EndPointDataResponse {
+  string message = 1;
+  string endpointdata = 2;
+  Status status = 3;
+  string id = 4;
+
+}
+
+ enum Status {
+    SUCCESS = 0;
+    FAILED = 1;
+
+  }
