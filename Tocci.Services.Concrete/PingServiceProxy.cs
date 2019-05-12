@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Tocci.Services.Models;
 using Tocci.Services.Grpc;
 using Grpc.Core;
-using Geo;
+using Ping;
 
 namespace Tocci.Services.Proxy
 {
@@ -14,7 +14,7 @@ namespace Tocci.Services.Proxy
         private string uri, name;
         public override string ServiceAddress { get; set; }
         public override string Name { get { return "Ping Service Proxy"; } }
-        public override ServiceType Type { get { return ServiceType.Geolocation; } }
+        public override ServiceType Type { get { return ServiceType.Ping; } }
         public override int ServicePort { get; set; }
 
         /// Call the grpc service
@@ -24,8 +24,8 @@ namespace Tocci.Services.Proxy
         {
             //TODO READ FROM CONFIG
             Channel channel = new Channel("127.0.0.1:8000", ChannelCredentials.Insecure);
-            var client = new Geo.EndpointReportingService.EndpointReportingServiceClient(channel);
-            EndpointDataRequest request = new EndpointDataRequest() { Endpoint = endPointAddress, Id = reportID };
+            var client = new Ping.PingService.PingServiceClient(channel);
+            var request = new EndpointDataRequest() { Endpoint = endPointAddress, Id = reportID };
             var response = client.GetReport(request);
 
             return new ServiceReport() { ServiceName = "Remote Ping Service", Data = response.Endpointdata, ServiceStatus = ServiceStatus.OK, ServiceType = ServiceType.Geolocation, ServiceAddress = ServiceAddress };

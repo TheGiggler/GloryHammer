@@ -46,6 +46,7 @@ namespace Tocci.WebAPI
         {
             //this is admittedly lame ... would have to be updated every time a new service type was added
             //refactoring is a BIG TODO!
+            //NOTE: the above later happened to me.  see, so lame!
 
             switch (apiType)
             {
@@ -53,6 +54,9 @@ namespace Tocci.WebAPI
                     return serviceModels.ServiceType.Geolocation;
                 case ServiceType.IP:
                     return serviceModels.ServiceType.IP;
+                case ServiceType.Ping:
+                    return serviceModels.ServiceType.Ping;
+
                 default:
                     throw new ArgumentException("Invalid ServiceType requested.");
                        

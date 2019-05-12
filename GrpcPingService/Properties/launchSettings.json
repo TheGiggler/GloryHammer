@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GrpcPingService": {
+      "commandName": "Project",
+      "commandLineArgs": "www.mlb.com"
+    }
+  }
+}

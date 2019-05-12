@@ -11,3 +11,4 @@ C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Deb
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.AssemblyInfo.cs
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.dll
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Tests.IntegrationTests\obj\Debug\netcoreapp2.2\Tocci.Tests.IntegrationTests.csprojAssemblyReference.cache

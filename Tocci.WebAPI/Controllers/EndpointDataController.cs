@@ -62,7 +62,15 @@ namespace Tocci.WebAPI.Controllers
             }
             else
             {
-                services = Utilities.MapRequestServicesToServiceType(request.ServiceTypes);
+                try
+                {
+                    services = Utilities.MapRequestServicesToServiceType(request.ServiceTypes);
+                }
+                catch (ArgumentException argEx)//will occur if bad service is passed.  probably could just skip it and keep going
+                {
+                    return new BadRequestResult();
+
+                }
                 //services = defaultServices;
             }
 

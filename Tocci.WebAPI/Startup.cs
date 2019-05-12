@@ -53,9 +53,6 @@ namespace Tocci.WebAPI
             services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
             services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
 
-            //// Add framework services.
-            //services.AddMvc();
-
             // https://github.com/aspnet/Hosting/issues/793
             // the IHttpContextAccessor service is not registered by default.
             // the clientId/clientIp resolvers use it.
@@ -68,8 +65,6 @@ namespace Tocci.WebAPI
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             //Load service dependecies and put in a List that can be injected
-
-
             //this is a tad unusual.  I want to inject the configured services as a collection that can be iterated over
             //not as a long list of parameters I hate long method signatures!
 

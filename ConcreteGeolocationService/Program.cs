@@ -26,10 +26,9 @@ namespace GrpcGeolocationService
             //{
             //    throw new ArgumentNullException("endpoint","Missing endpoint argument");
             //}
-            //endpointToTest = args[0];
+           // endpointToTest = args[0];
             //TODO test for missing
             settings = LoadSettingsFromConfig();
-
 
             //set up grpc server
             // Build a server
@@ -41,7 +40,7 @@ namespace GrpcGeolocationService
 
             CancellationTokenSource tokenSource = new CancellationTokenSource();
             var serverTask = RunServiceAsync(server, tokenSource.Token);
-            Console.WriteLine("GrpcLocationService listening on port " + settings.ListenPort);
+            Console.WriteLine("GrpcGeolocationService listening on port " + settings.ListenPort);
             Console.WriteLine("Press any key to stop the server...");
             Console.ReadKey();
 

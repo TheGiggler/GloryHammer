@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using GrpcPingService.Models;
+using networkInfo = System.Net.NetworkInformation;
 
 namespace GrpcPingService.Network
 {
@@ -16,7 +17,31 @@ namespace GrpcPingService.Network
 
         internal static async Task<FetchResult> FetchEndpointData(string endpoint)
         {
-            throw new NotImplementedException();
+            FetchResult fetch = new FetchResult() { Success = false };
+            PingData data = new PingData();
+
+            networkInfo.Ping ping = new networkInfo.Ping();
+         
+            byte[] inBuffer = Encoding.ASCII.GetBytes(Guid.NewGuid().ToString());
+
+            var reply = await ping.SendPingAsync(endpoint, 20, inBuffer);
+
+            if (reply.Status == networkInfo.IPStatus.Success)
+            {
+                var buffer = System.Text.Encoding.UTF8.GetString(reply.Buffer);
+                fetch.Success = true;
+                data.Address = reply.Address.ToString();
+                data.RoundTripTime = reply.RoundtripTime;
+                data.Status = reply.Status.ToString();
+                fetch.Data = data;
+            }
+            else
+            {
+
+                data.Status = reply.Status.ToString();
+            }
+            return fetch;
+            
         }
     }
 }

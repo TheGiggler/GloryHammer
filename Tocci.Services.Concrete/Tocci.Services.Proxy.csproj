@@ -3,14 +3,13 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="protos\" />
-  </ItemGroup>
   <ItemGroup>
     <Protobuf Include="protos\geoservice.proto" GrpcServices="Client" Generator="MSBuild:Compile" />
     <Content Include="protos\geoservice.proto" />
+    <Protobuf Include="protos\pingservice.proto" GrpcServices="Client" Generator="MSBuild:Compile" />
+    <Content Include="protos\pingservice.proto" />
     <None Remove="@(Protobuf)" />
+    <None Remove="protos\pingservice.proto" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Google.Protobuf" Version="3.7.0" />
