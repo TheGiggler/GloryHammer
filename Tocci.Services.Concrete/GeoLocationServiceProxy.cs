@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Tocci.Services.Models;
 using Grpc.Core;
 using Geo;
+using Tocci.Services.Proxy.Models;
 
 namespace Tocci.Services.Concrete
 {
@@ -16,7 +17,22 @@ namespace Tocci.Services.Concrete
         public override ServiceType Type { get { return ServiceType.Geolocation; } }
         public override int ServicePort { get; set; }
 
+        string grpcAddress;
+        int grpcPort;
+
         public GeolocationServiceProxy() { }
+
+        public GeolocationServiceProxy(GrpcConfig config)
+        {
+            var setting = config.Settings.Find(s => s.ServiceType == ServiceType.Geolocation);
+
+            ////TODO handle missing settings
+
+            grpcAddress = setting.RemoteHostAddress;
+            grpcPort = setting.RemoteHostPort;
+
+            grpcAddress += ":" + grpcPort;
+        }
 
         /// Call the grpc service
         /// </summary>
@@ -25,7 +41,7 @@ namespace Tocci.Services.Concrete
         {
             EndPointDataResponse response = new EndPointDataResponse(); 
             //TODO READ FROM CONFIG
-            Channel channel = new Channel("127.0.0.1:7000", ChannelCredentials.Insecure);
+            Channel channel = new Channel(grpcAddress, ChannelCredentials.Insecure);
             var client = new Geo.EndpointReportingService.EndpointReportingServiceClient(channel);
             EndpointDataRequest request = new EndpointDataRequest() { Endpoint = endPointAddress, Id = reportID };
             try

@@ -20,24 +20,26 @@ namespace Tocci.Services.Proxy
 
         string grpcAddress;
         int grpcPort;
-        //public PingServiceProxy()
-        //{
-        //    //var setting = settings.Settings.Find(s => s.ServiceType == ServiceType.Ping);
 
-        //    ////TODO handle missing settings
 
-        //    //grpcAddress = setting.RemoteHostAddress;
-        //    //grpcPort = setting.RemoteHostPort;
+        public PingServiceProxy(GrpcConfig config)
+        {
+            var setting = config.Settings.Find(s => s.ServiceType == ServiceType.Ping);
 
-        //    //grpcAddress += ":" + grpcPort;
-        //}
+            ////TODO handle missing settings
+
+            grpcAddress = setting.RemoteHostAddress;
+            grpcPort = setting.RemoteHostPort;
+
+            grpcAddress += ":" + grpcPort;
+        }
         /// Call the grpc service
         /// </summary>
         /// <returns></returns>
         public override async Task<ServiceReport> GetEndpointReport(string endPointAddress, string reportID, int? endPointPort = null)
         {
             EndPointDataResponse response = new EndPointDataResponse(); 
-            Channel channel = new Channel("127.0.0.1:8000", ChannelCredentials.Insecure);
+            Channel channel = new Channel(grpcAddress, ChannelCredentials.Insecure);
             var client = new Ping.PingService.PingServiceClient(channel);
             var request = new EndpointDataRequest() { Endpoint = endPointAddress, Id = reportID };
             try

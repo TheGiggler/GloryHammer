@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Tocci.Services.Models;
 using Grpc.Core;
 using ReverseDns;
+using Tocci.Services.Proxy.Models;
 
 namespace Tocci.Services.Proxy
 {
@@ -16,11 +17,26 @@ namespace Tocci.Services.Proxy
         public override ServiceType Type { get { return ServiceType.ReverseDns; } }
         public override int ServicePort { get; set; }
 
+        string grpcAddress;
+        int grpcPort;
+        public ReverseDnsServiceProxy(GrpcConfig config)
+        {
+            var setting = config.Settings.Find(s => s.ServiceType == ServiceType.ReverseDns);
+
+            //TODO handle missing settings
+
+            grpcAddress = setting.RemoteHostAddress;
+            grpcPort = setting.RemoteHostPort;
+
+            grpcAddress += ":" + grpcPort;
+        }
+
+
         public override async Task<ServiceReport> GetEndpointReport(string endPointAddress, string reportID, int? endPointPort = null)
         {
             EndPointDataResponse response = new EndPointDataResponse(); ;
             //TODO READ FROM CONFIG
-            Channel channel = new Channel("127.0.0.1:9000", ChannelCredentials.Insecure);
+            Channel channel = new Channel(grpcAddress, ChannelCredentials.Insecure);
             var client = new ReverseDnsService.ReverseDnsServiceClient(channel);
             EndpointDataRequest request = new EndpointDataRequest() { Endpoint = endPointAddress, Id = reportID };
             try

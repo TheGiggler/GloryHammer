@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
+
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Tocci.Services;
@@ -76,12 +78,9 @@ namespace Tocci.WebAPI
 
 
             //inject remote service settings from settings file
-            //var cf = Configuration.GetSection("GrpcConnectionSettings");
-            //services.Configure<GrpcConnectionSettings>(Configuration.GetSection("GrpcConnectionSettings"));
-           // services.Configure<GrpcConfig>(Config);
-            //var arr2 = myArray.ToList();
-
-            //var sv = services.Configure<GrpcConnectionSettings>(Configuration);
+            var gConfig = new GrpcConfig();
+            Configuration.Bind("GrpcConfig", gConfig);      //  <--- This
+            services.AddSingleton(gConfig);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

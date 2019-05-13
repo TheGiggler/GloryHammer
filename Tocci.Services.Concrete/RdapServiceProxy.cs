@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Tocci.Services.Models;
+using Tocci.Services.Proxy.Models;
 
 namespace Tocci.Services.Proxy
 {
@@ -18,17 +19,17 @@ namespace Tocci.Services.Proxy
 
         string grpcAddress;
         int grpcPort;
-        //public RdapServiceProxy()
-        //{
-        //    //var setting = settings.Settings.Find(s => s.ServiceType == ServiceType.Ping);
+        public RdapServiceProxy(GrpcConfig config)
+        {
+            var setting = config.Settings.Find(s => s.ServiceType == ServiceType.RDAP);
 
-        //    ////TODO handle missing settings
+            //TODO handle missing settings
 
-        //    //grpcAddress = setting.RemoteHostAddress;
-        //    //grpcPort = setting.RemoteHostPort;
+            grpcAddress = setting.RemoteHostAddress;
+            grpcPort = setting.RemoteHostPort;
 
-        //    //grpcAddress += ":" + grpcPort;
-        //}
+            grpcAddress += ":" + grpcPort;
+        }
 
         /// Call the grpc service
         /// </summary>
@@ -36,7 +37,7 @@ namespace Tocci.Services.Proxy
         public override async Task<ServiceReport> GetEndpointReport(string endPointAddress, string reportID, int? endPointPort = null)
         {
             EndPointDataResponse response = new EndPointDataResponse();
-            Channel channel = new Channel("127.0.0.1:10000", ChannelCredentials.Insecure);
+            Channel channel = new Channel(grpcAddress, ChannelCredentials.Insecure);
             var client = new RDAP.RDAPService.RDAPServiceClient(channel);
             var request = new EndpointDataRequest() { Endpoint = endPointAddress, Id = reportID };
             try

@@ -7,15 +7,17 @@ namespace Tocci.Services.Proxy.Models
 {
     public class GrpcConfig
     {
-        public GrpcConnectionSettings grpcConnectionSettings { get; set; }
+        public int tocci { get; set; }
+        //public GrpcConnectionSettings GrpcConnectionSettings { get; set; } /*= new GrpcConnectionSettings();*/
+        public List<GrpcConnectionSetting> Settings { get; set; } = new List<GrpcConnectionSetting>();
     }
-    public class GrpcConnectionSettings
-    {
-        public GrpcConnectionSetting[] Settings { get; set; }
-    }
+    //public class GrpcConnectionSettings
+    //{
+    //    public List<GrpcConnectionSetting> GrpcConnectionSetting { get; set; } /*= new List<GrpcConnectionSetting>();*/
+    //}
     public class GrpcConnectionSetting
     {
-        public int ServiceType { get; set; }
+        public ServiceType ServiceType { get; set; }
         public string RemoteHostAddress { get; set; }
         public int RemoteHostPort { get; set; }
     }
