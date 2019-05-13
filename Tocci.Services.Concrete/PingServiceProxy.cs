@@ -20,17 +20,17 @@ namespace Tocci.Services.Proxy
 
         string grpcAddress;
         int grpcPort;
-        public PingServiceProxy()// (GrpcConnectionSettings settings)
-        {
-            //var setting = settings.Settings.Find(s => s.ServiceType == ServiceType.Ping);
+        //public PingServiceProxy()
+        //{
+        //    //var setting = settings.Settings.Find(s => s.ServiceType == ServiceType.Ping);
 
-            ////TODO handle missing settings
+        //    ////TODO handle missing settings
 
-            //grpcAddress = setting.RemoteHostAddress;
-            //grpcPort = setting.RemoteHostPort;
+        //    //grpcAddress = setting.RemoteHostAddress;
+        //    //grpcPort = setting.RemoteHostPort;
 
-            //grpcAddress += ":" + grpcPort;
-        }
+        //    //grpcAddress += ":" + grpcPort;
+        //}
         /// Call the grpc service
         /// </summary>
         /// <returns></returns>

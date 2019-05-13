@@ -1,0 +1,12 @@
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\bin\Debug\netcoreapp2.2\GrpcRDAPService.dll.config
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\bin\Debug\netcoreapp2.2\GrpcRDAPService.deps.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\bin\Debug\netcoreapp2.2\GrpcRDAPService.runtimeconfig.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\bin\Debug\netcoreapp2.2\GrpcRDAPService.runtimeconfig.dev.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\bin\Debug\netcoreapp2.2\GrpcRDAPService.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\bin\Debug\netcoreapp2.2\GrpcRDAPService.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\obj\Debug\netcoreapp2.2\GrpcRDAPService.csproj.CoreCompileInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\obj\Debug\netcoreapp2.2\GrpcRDAPService.AssemblyInfoInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\obj\Debug\netcoreapp2.2\GrpcRDAPService.AssemblyInfo.cs
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\obj\Debug\netcoreapp2.2\GrpcRDAPService.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\obj\Debug\netcoreapp2.2\GrpcRDAPService.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\obj\Debug\netcoreapp2.2\GrpcRDAPService.csprojAssemblyReference.cache

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "GrpcRDAPService": {
+      "commandName": "Project",
+      "commandLineArgs": "nhl.com"
+    }
+  }
+}

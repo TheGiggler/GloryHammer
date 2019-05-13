@@ -25,7 +25,10 @@ namespace Tocci.WebAPI
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            //need to force it to load Tocci.Services.Proxy
             var b = new GeolocationServiceProxy();
+            b = null;
+
         }
 
         public IConfiguration Configuration { get; }
@@ -73,9 +76,12 @@ namespace Tocci.WebAPI
 
 
             //inject remote service settings from settings file
-            var cf = Configuration.GetSection("GrpcConnectionSettings:Settings");
-            services.Configure<GrpcConnectionSettings>(Configuration.GetSection("GrpcConnectionSettings"));
-            var myArray = Configuration.GetSection("GrpcConnectionSettings").GetChildren();
+            //var cf = Configuration.GetSection("GrpcConnectionSettings");
+            //services.Configure<GrpcConnectionSettings>(Configuration.GetSection("GrpcConnectionSettings"));
+           // services.Configure<GrpcConfig>(Config);
+            //var arr2 = myArray.ToList();
+
+            //var sv = services.Configure<GrpcConnectionSettings>(Configuration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

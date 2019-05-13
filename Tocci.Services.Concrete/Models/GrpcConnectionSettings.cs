@@ -5,13 +5,17 @@ using Tocci.Services.Models;
 
 namespace Tocci.Services.Proxy.Models
 {
+    public class GrpcConfig
+    {
+        public GrpcConnectionSettings grpcConnectionSettings { get; set; }
+    }
     public class GrpcConnectionSettings
     {
-        public List<GrpcConnectionSetting> Settings { get; set; }
+        public GrpcConnectionSetting[] Settings { get; set; }
     }
     public class GrpcConnectionSetting
     {
-        public ServiceType ServiceType { get; set; }
+        public int ServiceType { get; set; }
         public string RemoteHostAddress { get; set; }
         public int RemoteHostPort { get; set; }
     }

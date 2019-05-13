@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Network\Models\IpData.cs" />
+    <Compile Remove="Network\Models\**" />
+    <EmbeddedResource Remove="Network\Models\**" />
+    <None Remove="Network\Models\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,8 +34,5 @@
     <Protobuf Include="gRPC\protos\geoservice.proto" GrpcServices="Server" Generator="MSBuild:Compile" />
     <Content Include="gRPC\protos\geoservice.proto" />
     <None Remove="@(Protobuf)" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Network\Models\" />
   </ItemGroup>
 </Project>

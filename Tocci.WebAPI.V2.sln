@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Common", "Services
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services", "Tocci.Services\Tocci.Services.csproj", "{75F9087C-9A45-491A-BD5E-B33CDA4CCB03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcReverseDnsService", "GrpcReverseDnsService\GrpcReverseDnsService.csproj", "{8029A7B1-4720-4600-9C3E-1FEBE67C78CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcReverseDnsService", "GrpcReverseDnsService\GrpcReverseDnsService.csproj", "{8029A7B1-4720-4600-9C3E-1FEBE67C78CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcRDAPService", "GrpcRDAPService\GrpcRDAPService.csproj", "{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +67,10 @@ Global
 		{8029A7B1-4720-4600-9C3E-1FEBE67C78CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8029A7B1-4720-4600-9C3E-1FEBE67C78CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8029A7B1-4720-4600-9C3E-1FEBE67C78CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{61758728-87FA-4305-A80B-E1B4B8DD2E78} = {FBADF037-E609-4B23-BA5A-5C6FFA543EDA}
 		{80621A28-E65B-460D-90EC-464BEABE942B} = {FBADF037-E609-4B23-BA5A-5C6FFA543EDA}
 		{8029A7B1-4720-4600-9C3E-1FEBE67C78CA} = {FBADF037-E609-4B23-BA5A-5C6FFA543EDA}
+		{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6} = {FBADF037-E609-4B23-BA5A-5C6FFA543EDA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66D3AE86-23F7-4B3B-91F0-2A6E4F540868}

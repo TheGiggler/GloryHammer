@@ -58,6 +58,8 @@ namespace Tocci.WebAPI
                     return serviceModels.ServiceType.Ping;
                 case ServiceType.ReverseDns:
                     return serviceModels.ServiceType.ReverseDns;
+                case ServiceType.RDAP:
+                    return serviceModels.ServiceType.RDAP;
 
                 default:
                     throw new ArgumentException("Invalid ServiceType requested.");

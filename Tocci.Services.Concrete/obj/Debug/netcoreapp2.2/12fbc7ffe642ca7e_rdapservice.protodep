@@ -1,0 +1,2 @@
+obj\Debug\netcoreapp2.2/Rdapservice.cs \
+obj\Debug\netcoreapp2.2/RdapserviceGrpc.cs: protos/rdapservice.proto

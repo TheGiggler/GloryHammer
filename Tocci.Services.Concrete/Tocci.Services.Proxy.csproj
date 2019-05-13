@@ -6,11 +6,15 @@
   <ItemGroup>
     <Protobuf Include="protos\geoservice.proto" GrpcServices="Client" Generator="MSBuild:Compile" />
     <Content Include="protos\geoservice.proto" />
+    <Content Include="protos\rdapservice.proto" />
     <Protobuf Include="protos\pingservice.proto" GrpcServices="Client" Generator="MSBuild:Compile" />
     <Content Include="protos\pingservice.proto" />
     <Protobuf Include="protos\reversednsservice.proto" GrpcServices="Client" Generator="MSBuild:Compile" />
     <Content Include="protos\reversednsservice.proto" />
+    <Protobuf Include="protos\rdapservice.proto" GrpcServices="Client" Generator="MSBuild:Compile" />
+    <Content Include="protos\rdapservice.proto" />
     <None Remove="@(Protobuf)" />
+    <None Remove="protos\rdapservice.proto" />
 
   </ItemGroup>
   <ItemGroup>
