@@ -1,2 +1,7 @@
 # GloryHammer
 Directory names do not necessarily echo the names of the types withing ... lotta refactoring!
+
+I typically handle and log exceptions where they occur rather than letting them bubble up and possibly kill the whole process.
+My practice is to hand a result class that includes information on success or failure.
+
+I was going to use Polly to implement retry/backoff in the ServiceProxies where the make the gRPC call but decided not to hold up the entire flow due to one possibluy transient fault.  It's easy enough to submit another request.
