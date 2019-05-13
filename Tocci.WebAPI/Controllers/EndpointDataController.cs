@@ -50,6 +50,8 @@ namespace Tocci.WebAPI.Controllers
         /// <returns></returns>
         [Route("")]
         [HttpPost]
+        [ProducesResponseType(201, Type = typeof(EndPointReport))]
+        [ProducesResponseType(400, Type = typeof(void))]
         public async Task<ActionResult<EndPointReport>> CreateEndPointReport([FromBody] EndpointReportRequest request)
         {
             List<serviceModels.ServiceType> services = new List<serviceModels.ServiceType>();

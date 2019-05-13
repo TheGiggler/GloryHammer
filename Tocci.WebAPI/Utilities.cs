@@ -28,6 +28,25 @@ namespace Tocci.WebAPI
             endPointReport.EndPointPort = result.EndPointPort;
             endPointReport.ServiceResponses = result.ServiceReports;
             endPointReport.GeneratedDateTimeUTC = DateTime.UtcNow;
+
+            var reportCount = result.ServiceReports.Count();
+            var failed = result.ServiceReports.Where(r => r.ServiceStatus == serviceModels.ServiceStatus.Error).Count();
+            var succeeded = result.ServiceReports.Where(r => r.ServiceStatus == serviceModels.ServiceStatus.OK).Count();
+            var unavailable = result.ServiceReports.Where(r => r.ServiceStatus == serviceModels.ServiceStatus.Unavailable).Count();
+
+            if (succeeded == reportCount)
+            {
+                endPointReport.Status = Status.Success;
+            }
+            else if (failed + unavailable == reportCount)
+            {
+                endPointReport.Status = Status.Failed; ;
+            }
+            else
+            {
+                endPointReport.Status = Status.Partial;
+            }
+           
             return endPointReport;
 
         }
@@ -37,7 +56,7 @@ namespace Tocci.WebAPI
             List<serviceModels.ServiceType> result = new List<serviceModels.ServiceType>();
 
             serviceTypes.ForEach(s=>result.Add(MapApiServiceTypeToServiceType(s)));
-
+           
             return result;
         }
 

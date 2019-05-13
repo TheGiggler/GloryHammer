@@ -66,6 +66,7 @@ namespace Tocci.WebAPI.Models
         public string EndPointAddress { get; set; }
         public int EndPointPort { get; set; }
         public DateTime GeneratedDateTimeUTC { get; set; }
+        public Status Status { get; set; }
         /// <summary>
         /// List of all returned data from all requested services
         /// </summary>
