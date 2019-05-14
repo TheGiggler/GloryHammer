@@ -64,6 +64,9 @@ namespace Tocci.WebAPI.Models
     {
         public string ReportID { get; set; }
         public string EndPointAddress { get; set; }
+        /// <summary>
+        /// For future use
+        /// </summary>
         public int EndPointPort { get; set; }
         public DateTime GeneratedDateTimeUTC { get; set; }
         public Status Status { get; set; }
