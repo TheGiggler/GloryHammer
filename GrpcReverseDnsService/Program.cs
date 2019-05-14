@@ -18,11 +18,11 @@ namespace GrpcReverseDnsService
 
         static void Main(string[] args)
         {
-           // endpointToTest = args[0];
+          //  endpointToTest = args[0];
             //TODO test for missing
             settings = LoadSettingsFromConfig();
 
-            //var result = NetworkService.FetchEndpointData(endpointToTest);
+        //    var result = NetworkService.FetchEndpointData(endpointToTest);
 
             //set up grpc server
             // Build a server

@@ -15,6 +15,7 @@ namespace GrpcRDAPService.Network
         {
             public bool Success {get;set;}
             public string Data { get; set; }
+            public string Message { get; set; }
         }
         internal static async Task<FetchResult> FetchEndpointData(string rdapApiUrl,string endpoint)
         {
@@ -59,6 +60,13 @@ namespace GrpcRDAPService.Network
 
                 //response is in application/rdap+json doesn't seem to be parseable 
                 result.Data = await response.Content.ReadAsStringAsync();
+  
+            }
+            else if (response.StatusCode == HttpStatusCode.NotFound)
+            {
+                result.Success = false;
+                result.Message = "Data not found. Only include domain name in request.";
+
             }
             else
             {

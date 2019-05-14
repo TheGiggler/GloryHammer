@@ -50,6 +50,7 @@ namespace Tocci.Services.Models
         public string ServiceName { get; set; }
         public string Data { get; set; }
         public ServiceStatus ServiceStatus { get; set; }
+        public string Message { get; set; }
 
     }
 

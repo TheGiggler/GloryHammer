@@ -4,9 +4,9 @@ C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\bin\Release\ne
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\bin\Release\netcoreapp2.2\GrpcReverseDnsService.runtimeconfig.dev.json
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\bin\Release\netcoreapp2.2\GrpcReverseDnsService.dll
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\bin\Release\netcoreapp2.2\GrpcReverseDnsService.pdb
-C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Release\netcoreapp2.2\GrpcReverseDnsService.csprojAssemblyReference.cache
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Release\netcoreapp2.2\GrpcReverseDnsService.csproj.CoreCompileInputs.cache
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Release\netcoreapp2.2\GrpcReverseDnsService.AssemblyInfoInputs.cache
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Release\netcoreapp2.2\GrpcReverseDnsService.AssemblyInfo.cs
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Release\netcoreapp2.2\GrpcReverseDnsService.dll
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Release\netcoreapp2.2\GrpcReverseDnsService.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Release\netcoreapp2.2\GrpcReverseDnsService.csprojAssemblyReference.cache

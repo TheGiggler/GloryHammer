@@ -24,12 +24,17 @@ namespace GrpcReverseDns.gRPC
             Console.WriteLine($"Ping service ... request received at {DateTime.UtcNow}: {request.Endpoint} ... id={request.Id}...");
             EndPointDataResponse response = new EndPointDataResponse() { Status = ReverseDns.Status.Failed };
             var fetch = await NetworkService.FetchEndpointData(request.Endpoint);
-
+            response.Message = fetch.Message;
             if (fetch.Success)
             {
+
                 response.Status = ReverseDns.Status.Success;
                 response.Endpointdata = JsonConvert.SerializeObject(fetch.Data);
                 response.Id = request.Id;
+            }
+            else
+            {
+                response.Status = ReverseDns.Status.Failed;
             }
             return response;
         }

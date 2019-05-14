@@ -9,3 +9,4 @@ C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Debug\netc
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Debug\netcoreapp2.2\GrpcReverseDnsService.dll
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Debug\netcoreapp2.2\GrpcReverseDnsService.pdb
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\bin\Debug\netcoreapp2.2\GrpcReverseDnsService.dll.config
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\obj\Debug\netcoreapp2.2\GrpcReverseDnsService.csprojAssemblyReference.cache

@@ -43,7 +43,7 @@ namespace Tocci.Services.Proxy
             {
                 response = client.GetReport(request);
 
-                return new ServiceReport() { ServiceName = "Remote ReverseDns Service", Data = response.Endpointdata, ServiceStatus = ServiceStatus.OK, ServiceType = ServiceType.ReverseDns, ServiceAddress = ServiceAddress };
+                return new ServiceReport() {Message = response.Message, ServiceName = "Remote ReverseDns Service", Data = response.Endpointdata, ServiceStatus = ServiceStatus.OK, ServiceType = ServiceType.ReverseDns, ServiceAddress = ServiceAddress };
             }
             catch (Exception ex)
             {

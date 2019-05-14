@@ -92,7 +92,7 @@ namespace Tocci.WebAPI.Controllers
                 }
                 //services = defaultServices;
             }
-
+            
             servicesRequest.ServiceTypes = services;
             servicesRequest.EndpointAddress = request.EndpointAddress;
             servicesRequest.EndpointPort = request.EndpointPort;
