@@ -24,16 +24,15 @@ Swagger JSON is at https://tocciwebapi.azurewebsites.net/swagger/v1/swagger.json
 A sample POST request:
 {
 "EndpointAddress":"mlb.com",
-"ServiceTypes":["ReverseDns","RDAP","PING","Geolocation"]//these are the valid type enums
+"ServiceTypes":["ReverseDns","RDAP","PING","Geolocation"]//these are the valid ServiceType enums
 }
 
-A successful request will return a 201 with the created resource.  Some don't like to send the created resource in the reponse to a POST, but I've got no problem with it!
+A successful request will return a 201 with the EndPointReport that was generated..  Some don't like to send the created resource in the reponse to a POST, but I've got no problem with it!
 
-There's also a Location header with the Uri of the report, which can be used to GET it (as long as it stays in memory)
-
+There's also a Location header with the Uri of the report, which can be used to GET it (as long as it stays in memory).
 
 I typically handle and log exceptions where they occur rather than letting them bubble up and possibly kill the whole process.
-My practice is to hand a result class that includes information on success or failure.
+My practice is to return a typed result object that includes information on success or failure.
 
 I was going to use Polly to implement retry/backoff in the ServiceProxies where they make the gRPC call but decided not to hold up the entire flow due to one possibluy transient fault.  It's easy enough to submit another request.
 
