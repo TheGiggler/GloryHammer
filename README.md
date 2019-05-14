@@ -15,11 +15,22 @@ Because the return data from the various services was not heterogenous, the data
 
 The report can be retrieved again at the URL returned in the Location header.  For the purpose of this exercise, it's only stored in memory rather than a durable store.  In production, MongoDB would be a natural store for it as will never be written to again, only read.
 
-There is rate limiting configured in appSettings.json of the web api.
+There is rate limiting configured in appSettings.json of the web api.  You'll see some 429's if you POST fast enough.
 
 Swagger documentation is available at https://tocciwebapi.azurewebsites.net/swagger/index.html.
 
 Swagger JSON is at https://tocciwebapi.azurewebsites.net/swagger/v1/swagger.json
+
+A sample POST request:
+{
+"EndpointAddress":"mlb.com",
+"ServiceTypes":["ReverseDns","RDAP","PING","Geolocation"]//these are the valid type enums
+}
+
+A successful request will return a 201 with the created resource.  Some don't like to send the created resource in the reponse to a POST, but I've got no problem with it!
+
+There's also a Location header with the Uri of the report, which can be used to GET it (as long as it stays in memory)
+
 
 I typically handle and log exceptions where they occur rather than letting them bubble up and possibly kill the whole process.
 My practice is to hand a result class that includes information on success or failure.
@@ -35,17 +46,11 @@ Hostname with domain name will annoy RDAP service
 
 Todos:
 In the cause of resilience, wrap console apps in Windows Services.
+The models for the various service outputs could use a base class.
 
 
 
-POST
-{
-"EndpointAddress":"www.mlb.com",
-"ServiceTypes":["Ping","Geolocation","ReverseDns","RDAP"]
 
-}
-GET (from Location header)
-http://localhost:1398/api/EndpointReport?reportid=dc0563e1-6e0b-4547-88d1-be0e16352234
 
 
 
