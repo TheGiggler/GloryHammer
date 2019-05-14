@@ -21,10 +21,10 @@ Swagger documentation is available at https://tocciwebapi.azurewebsites.net/swag
 
 Swagger JSON is at https://tocciwebapi.azurewebsites.net/swagger/v1/swagger.json
 
-A sample POST request:
+A sample POST request, with the valid ServiceType enums:
 {
 "EndpointAddress":"mlb.com",
-"ServiceTypes":["ReverseDns","RDAP","PING","Geolocation"]//these are the valid ServiceType enums
+"ServiceTypes":["ReverseDns","RDAP","PING","Geolocation"]
 }
 
 A successful request will return a 201 with the EndPointReport that was generated..  Some don't like to send the created resource in the reponse to a POST, but I've got no problem with it!
@@ -36,7 +36,7 @@ My practice is to return a typed result object that includes information on succ
 
 I was going to use Polly to implement retry/backoff in the ServiceProxies where they make the gRPC call but decided not to hold up the entire flow due to one possibluy transient fault.  It's easy enough to submit another request.
 
-I haven't done so here, but I find that Serilog and Seq make a nice combination for saving and accessing structured logs.
+I haven't done so here, but I find that Serilog and Seq make a nice combination for saving and accessing structured logs in applications of this size.
 
 
 
@@ -46,6 +46,7 @@ Hostname with domain name will annoy RDAP service
 Todos:
 In the cause of resilience, wrap console apps in Windows Services.
 The models for the various service outputs could use a base class.
+Add structured logging with Serilog and Seq.
 
 
 
