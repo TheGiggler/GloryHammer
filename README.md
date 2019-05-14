@@ -11,6 +11,8 @@ The API is running in Azure App Services, while the workers run on an Azure VM.
 
 They handle their individual requests from the proxies and their responses are fanned in back into the ServiceManager and compiled into an EndPointReport, which is sent back to the requestor.
 
+Because the return data from the various services was not heterogenous, the data returned for the various services will have different shapes.
+
 The report can be retrieved again at the URL returned in the Location header.  For the purpose of this exercise, it's only stored in memory rather than a durable store.  In production, MongoDB would be a natural store for it as will never be written to again, only read.
 
 There is rate limiting configured in appSettings.json of the web api.
@@ -27,11 +29,11 @@ I was going to use Polly to implement retry/backoff in the ServiceProxies where 
 I haven't done so here, but I find that Serilog and Seq make a nice combination for saving and accessing structured logs.
 
 
+
 Known Issues:
 Hostname with domain name will annoy RDAP service
 
 Todos:
-
 In the cause of resilience, wrap console apps in Windows Services.
 
 
