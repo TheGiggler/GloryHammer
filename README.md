@@ -15,9 +15,9 @@ The report can be retrieved again at the URL returned in the Location header.  F
 
 There is rate limiting configured in appSettings.json of the web api.
 
-Swagger documentation is available at hostname/swagger.
+Swagger documentation is available at https://tocciwebapi.azurewebsites.net/swagger/index.html.
 
-Swagger JSON is at hostname/swagger/v1/swagger.json
+Swagger JSON is at https://tocciwebapi.azurewebsites.net/swagger/v1/swagger.json
 
 I typically handle and log exceptions where they occur rather than letting them bubble up and possibly kill the whole process.
 My practice is to hand a result class that includes information on success or failure.
