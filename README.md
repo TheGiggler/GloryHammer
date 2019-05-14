@@ -28,7 +28,7 @@ I haven't done so here, but I find that Serilog and Seq make a nice combination 
 
 
 Known Issues:
-domain name will annoy RDAP service
+Hostname with domain name will annoy RDAP service
 
 Todos:
 
