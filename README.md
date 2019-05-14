@@ -1,4 +1,14 @@
-# GloryHammer
+
+The architecture is fairly simple.
+
+A semi-RESTful API (ASP.NET CORE) that takes in a list of services to retrieve data about a domain or IP address.
+
+The API sends a request to the service layer which will fan out the various requests to configured enpoints where the workers are listening.  This communication is done via gRPC.
+
+The workers are .NET Core Console Apps, each hosting a gRPC server.
+
+
+
 Directory names do not necessarily echo the names of the types withing ... lotta refactoring!
 
 I typically handle and log exceptions where they occur rather than letting them bubble up and possibly kill the whole process.
