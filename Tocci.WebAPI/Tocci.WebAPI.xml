@@ -4,6 +4,14 @@
         <name>Tocci.WebAPI</name>
     </assembly>
     <members>
+        <member name="M:Tocci.WebAPI.Controllers.EndpointReportController.GetEndPointReport(System.String)">
+            <summary>
+            A method to retrieve a stored report by its id
+            </summary>
+            <param name="endpointAddress"></param>
+            <param name="endPointPort"></param>
+            <returns></returns>
+        </member>
         <member name="M:Tocci.WebAPI.Controllers.EndpointReportController.CreateEndPointReport(Tocci.WebAPI.Models.EndpointReportRequest)">
             <summary>
             This is a POST because we are creating a resource, an EndpointReport

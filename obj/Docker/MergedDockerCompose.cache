@@ -1,0 +1,11 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  grpcgeolocationservice:
+    build:
+      context: C:\Users\mctoc\source\repos\Tocci.WebAPI.V2
+      dockerfile: ConcreteGeolocationService\Dockerfile
+    image: grpcgeolocationservice
+version: '3.4'

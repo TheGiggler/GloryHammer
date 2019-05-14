@@ -23,7 +23,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services", "Tocci.Ser
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcReverseDnsService", "GrpcReverseDnsService\GrpcReverseDnsService.csproj", "{8029A7B1-4720-4600-9C3E-1FEBE67C78CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcRDAPService", "GrpcRDAPService\GrpcRDAPService.csproj", "{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcRDAPService", "GrpcRDAPService\GrpcRDAPService.csproj", "{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

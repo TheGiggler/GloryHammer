@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  grpcgeolocationservice:
+    image: ${DOCKER_REGISTRY-}grpcgeolocationservice
+    build:
+      context: .
+      dockerfile: ConcreteGeolocationService\Dockerfile

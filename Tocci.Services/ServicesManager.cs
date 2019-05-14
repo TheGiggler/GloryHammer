@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Tocci.Services.Models;
@@ -13,27 +14,23 @@ namespace Tocci.Services
     {
         List<EndpointServiceProxyBase> _endpointServices; //services injected in constructor
         SummaryServiceReport _report;
-
+        ILogger<ServicesManager> _logger;
         public ServicesManager(IEnumerable<EndpointServiceProxyBase>endpointServices)
         {
             _endpointServices = new List<EndpointServiceProxyBase>(endpointServices);
-           
+           // _logger = logger;
             _report = new SummaryServiceReport();
         }
 
-        public async Task<SummaryServiceReport> SendServiceRequests(ServiceRequest serviceRequest)
+        public async Task<SummaryServiceReport> SendServiceRequests(ServiceRequest serviceRequest, ILogger logger)
         {
+            //create id for correlationid/reportid
+            var id = Guid.NewGuid().ToString();
             SummaryServiceReport summary = new SummaryServiceReport() { EndPointAddress = serviceRequest.EndpointAddress, EndPointPort = serviceRequest.EndpointPort };
 
             Parallel.ForEach(serviceRequest.ServiceTypes, async(currentServiceType) =>
             {
-                //TODO TODO TODO
-                //check if service type is in requested list.  if not, skip it
-                //>do that here
-
-                //create id for correlation
-                var id = Guid.NewGuid().ToString();
-               
+                logger.LogInformation($"Preparing service requests for reportid{id}");
                 //TODO: Allow multiple services of same time to be invoked
                 var service = _endpointServices.Find(svc => svc.Type == currentServiceType);
                 if (service != null)
@@ -46,6 +43,7 @@ namespace Tocci.Services
                 }
             });
 
+            logger.LogInformation($"Completed service requests for reportid {id}");
             return summary;
 
         }

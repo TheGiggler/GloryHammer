@@ -18,3 +18,7 @@ C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Services\obj\Debug\netcoreapp2
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Services\obj\Debug\netcoreapp2.2\Tocci.Services.AssemblyInfo.cs
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Services\obj\Debug\netcoreapp2.2\Tocci.Services.dll
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Services\obj\Debug\netcoreapp2.2\Tocci.Services.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Services\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Services\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Services\obj\Debug\netcoreapp2.2\Tocci.Services.csprojAssemblyReference.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Tocci.Services\obj\Debug\netcoreapp2.2\Tocci.Services.csproj.CopyComplete
