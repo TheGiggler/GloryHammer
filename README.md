@@ -3,9 +3,13 @@ The architecture is fairly simple.
 
 A semi-RESTful API (ASP.NET CORE) that takes in a list of services to retrieve data about a domain or IP address.
 
-The API sends a request to the service layer which will fan out the various requests to configured enpoints where the workers are listening.  This communication is done via gRPC.
+The API sends a EndpointReportRequest to the service layer's ServiceManager which will fan out the various requests to configured enpoints where the workers are listening.  This communication is done via gRPC.
 
 The workers are .NET Core Console Apps, each hosting a gRPC server.
+
+They handle their individual requests from the proxies and their responses are fanned in back into the ServiceManager and compiled into an EndPointReport, which is sent back to the requestor.
+
+The report can be retrieved again at the URL returned in the Location header.  For the purpose of this exercise, it's only stored in memory rather than a durable store.  In production, MongoDB would be a natural store for it as will never be written to again, only read.
 
 There is rate limiting configured in appSettings.json of the web api.
 
@@ -21,3 +25,26 @@ I was going to use Polly to implement retry/backoff in the ServiceProxies where 
 I haven't done so here, but I find that Serilog and Seq make a nice combination for saving and accessing structured logs.
 
 Directory names do not necessarily echo the names of the types within.
+
+
+POST
+{
+"EndpointAddress":"www.mlb.com",
+"EndpointPort":80,
+"ServiceTypes":["Ping","Geolocation","ReverseDns","RDAP"]
+
+}
+GET (from Location header)
+http://localhost:1398/api/EndpointReport?reportid=dc0563e1-6e0b-4547-88d1-be0e16352234
+
+dotnet C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\bin\Debug\netcoreapp2.2\GrpcGeolocationService.dll
+
+
+dotnet C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\bin\Debug\netcoreapp2.2\GrpcPingService.dll
+
+dotnet C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcReverseDnsService\bin\Debug\netcoreapp2.2\GrpcReverseDnsService.dll
+
+
+
+dotnet C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcRDAPService\bin\Debug\netcoreapp2.2\GrpcRDAPService.dll
+
