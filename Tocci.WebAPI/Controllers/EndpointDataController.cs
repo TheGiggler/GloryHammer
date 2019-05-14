@@ -22,15 +22,16 @@ namespace Tocci.WebAPI.Controllers
     {
         //fake persistence
         static List<EndPointReport> Reports = new List<EndPointReport>();
-        List<serviceModels.ServiceType> defaultServices = new List<serviceModels.ServiceType>() { serviceModels.ServiceType.Geolocation, serviceModels.ServiceType.IP };
+        List<serviceModels.ServiceType> defaultServices = new List<serviceModels.ServiceType>() { serviceModels.ServiceType.Geolocation, serviceModels.ServiceType.ReverseDns };
+        ILoggerFactory loggerFactory;
         ILogger _logger;
         ServicesManager manager;
         string _hostNameAndPort;          
-        public EndpointReportController(IEnumerable<EndpointServiceProxyBase> endpointServices, IConfiguration config, ILogger logger)
+        public EndpointReportController(IEnumerable<EndpointServiceProxyBase> endpointServices, IConfiguration config, ILoggerFactory loggerFactory)
         {
             manager = new ServicesManager(endpointServices);
             _hostNameAndPort = (string)config.GetValue(typeof(string), "HostNameAndPort");
-            _logger = logger;
+            _logger= loggerFactory.CreateLogger("Tocci.WebAPI");
         }
 
         /// <summary>
@@ -51,7 +52,7 @@ namespace Tocci.WebAPI.Controllers
 
             if (report == null)
             {
-                NotFound(typeof(void));
+                return NotFound();
             }
 
             return Ok(report);
@@ -101,7 +102,7 @@ namespace Tocci.WebAPI.Controllers
             var report=  Utilities.GenerateEndPointReport(result);
             //save to fake db
             Reports.Add(report);
-            return Created($"{_hostNameAndPort}/api/EndpointReport?{report.ReportID}",report);
+            return Created($"{_hostNameAndPort}/api/EndpointReport?reportid={report.ReportID}",report);
 
         }
 
