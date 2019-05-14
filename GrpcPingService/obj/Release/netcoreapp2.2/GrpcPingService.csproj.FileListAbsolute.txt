@@ -1,0 +1,12 @@
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\bin\Release\netcoreapp2.2\GrpcPingService.dll.config
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\bin\Release\netcoreapp2.2\GrpcPingService.deps.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\bin\Release\netcoreapp2.2\GrpcPingService.runtimeconfig.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\bin\Release\netcoreapp2.2\GrpcPingService.runtimeconfig.dev.json
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\bin\Release\netcoreapp2.2\GrpcPingService.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\bin\Release\netcoreapp2.2\GrpcPingService.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Release\netcoreapp2.2\GrpcPingService.csprojAssemblyReference.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Release\netcoreapp2.2\GrpcPingService.csproj.CoreCompileInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Release\netcoreapp2.2\GrpcPingService.AssemblyInfoInputs.cache
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Release\netcoreapp2.2\GrpcPingService.AssemblyInfo.cs
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Release\netcoreapp2.2\GrpcPingService.dll
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\GrpcPingService\obj\Release\netcoreapp2.2\GrpcPingService.pdb

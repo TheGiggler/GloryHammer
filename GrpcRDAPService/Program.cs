@@ -41,7 +41,7 @@ namespace GrpcRDAPService
 
             CancellationTokenSource tokenSource = new CancellationTokenSource();
             var serverTask = RunServiceAsync(server, tokenSource.Token);
-            Console.WriteLine("GrpcGeolocationService listening on port " + settings.ListenPort);
+            Console.WriteLine($"GrpcGeolocationService listening at {settings.ListenUrl}:{settings.ListenPort}...") ;
             Console.WriteLine("Press any key to stop the server...");
             Console.ReadKey();
 

@@ -31,7 +31,7 @@ namespace Tocci.Services.Concrete
             grpcAddress = setting.RemoteHostAddress;
             grpcPort = setting.RemoteHostPort;
 
-            grpcAddress += ":" + grpcPort;
+            //grpcAddress += ":" + grpcPort;
         }
 
         /// Call the grpc service
@@ -41,7 +41,7 @@ namespace Tocci.Services.Concrete
         {
             EndPointDataResponse response = new EndPointDataResponse(); 
             //TODO READ FROM CONFIG
-            Channel channel = new Channel(grpcAddress, ChannelCredentials.Insecure);
+            Channel channel = new Channel(grpcAddress,grpcPort,ChannelCredentials.Insecure);
             var client = new Geo.EndpointReportingService.EndpointReportingServiceClient(channel);
             EndpointDataRequest request = new EndpointDataRequest() { Endpoint = endPointAddress, Id = reportID };
             try

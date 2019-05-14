@@ -1,0 +1,2 @@
+obj\Release\netcoreapp2.2/Rdapservice.cs \
+obj\Release\netcoreapp2.2/RdapserviceGrpc.cs: gRPC/protos/rdapservice.proto

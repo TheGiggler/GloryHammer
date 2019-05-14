@@ -22,31 +22,38 @@ namespace GrpcGeolocationService
 
         static void Main(string[] args)
         {
-            //if (args.Length < 1)
-            //{
-            //    throw new ArgumentNullException("endpoint","Missing endpoint argument");
-            //}
-           // endpointToTest = args[0];
-            //TODO test for missing
-            settings = LoadSettingsFromConfig();
-
-            //set up grpc server
-            // Build a server
-            var server = new Server
+            try
             {
-                Services = { EndpointReportingService.BindService(new GrpcServerImpl(settings)) },
-                Ports = { new ServerPort(settings.ListenUrl, settings.ListenPort, ServerCredentials.Insecure) }
-            };
+                //if (args.Length < 1)
+                //{
+                //    throw new ArgumentNullException("endpoint","Missing endpoint argument");
+                //}
+                // endpointToTest = args[0];
+                //TODO test for missing
+                settings = LoadSettingsFromConfig();
 
-            CancellationTokenSource tokenSource = new CancellationTokenSource();
-            var serverTask = RunServiceAsync(server, tokenSource.Token);
-            Console.WriteLine("GrpcGeolocationService listening on port " + settings.ListenPort);
-            Console.WriteLine("Press any key to stop the server...");
-            Console.ReadKey();
+                //set up grpc server
+                // Build a server
+                var server = new Server
+                {
+                    Services = { EndpointReportingService.BindService(new GrpcServerImpl(settings)) },
+                    Ports = { new ServerPort(settings.ListenUrl, settings.ListenPort, ServerCredentials.Insecure) }
+                };
 
-            tokenSource.Cancel();
-            Console.WriteLine("Shutting down...");
-            serverTask.Wait();
+                CancellationTokenSource tokenSource = new CancellationTokenSource();
+                var serverTask = RunServiceAsync(server, tokenSource.Token);
+                Console.WriteLine($"GrpcGeolocationService listening at {settings.ListenUrl}:{settings.ListenPort}...");
+                Console.WriteLine("Press any key to stop the server...");
+
+                Console.Read();
+                tokenSource.Cancel();
+                Console.WriteLine("Shutting down...");
+                serverTask.Wait();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Couldn't start gRPC server: {ex.ToString()}");
+            }
         }
 
         private static ServiceSettings LoadSettingsFromConfig()
@@ -69,8 +76,15 @@ namespace GrpcGeolocationService
 
         private static async Task RunServiceAsync(Server server, CancellationToken cancellationToken = default(CancellationToken))
         {
-            // Start server
-            server.Start();
+            try
+            {
+                // Start server
+                server.Start();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Couldn't start gRPC server: {ex.ToString()}");
+            }
 
             await AwaitCancellation(cancellationToken);
             await server.ShutdownAsync();
