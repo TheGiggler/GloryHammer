@@ -71,8 +71,8 @@ namespace Tocci.WebAPI
             {
                 case ServiceType.Geolocation:
                     return serviceModels.ServiceType.Geolocation;
-                case ServiceType.IP:
-                    return serviceModels.ServiceType.IP;
+                //case ServiceType.IP:
+                //    return serviceModels.ServiceType.IP;
                 case ServiceType.Ping:
                     return serviceModels.ServiceType.Ping;
                 case ServiceType.ReverseDns:
