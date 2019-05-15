@@ -2,7 +2,7 @@
   "profiles": {
     "GrpcReverseDnsService": {
       "commandName": "Project",
-      "commandLineArgs": "www.nhl.com"
+      "commandLineArgs": "34.234.224.11"
     }
   }
 }

@@ -21,10 +21,15 @@ namespace GrpcReverseDns.gRPC
 
         public async override Task<EndPointDataResponse> GetReport(EndpointDataRequest request, ServerCallContext context)
         {
-            Console.WriteLine($"Ping service ... request received at {DateTime.UtcNow}: {request.Endpoint} ... id={request.Id}...");
+            Console.WriteLine($"Reverse DNS service ... request received at {DateTime.UtcNow}: {request.Endpoint} ... id={request.Id}...");
             EndPointDataResponse response = new EndPointDataResponse() { Status = ReverseDns.Status.Failed };
             var fetch = await NetworkService.FetchEndpointData(request.Endpoint);
-            response.Message = fetch.Message;
+
+            if (fetch.Message != null)
+            {
+                response.Message = fetch.Message;
+            }
+
             if (fetch.Success)
             {
 

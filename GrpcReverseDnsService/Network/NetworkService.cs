@@ -32,7 +32,7 @@ namespace GrpcReverseDnsService.Network
 
             }
 
-            IPHostEntry hosts = Dns.GetHostEntry(endpoint);
+            IPHostEntry hosts = Dns.GetHostEntry(addr);
 
             fetch.Data = new ReverseDnsData(hosts);
             fetch.Success = true;

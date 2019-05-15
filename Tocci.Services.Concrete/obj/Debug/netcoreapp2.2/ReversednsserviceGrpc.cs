@@ -57,7 +57,7 @@ namespace ReverseDns {
       }
       public virtual global::ReverseDns.EndPointDataResponse GetReport(global::ReverseDns.EndpointDataRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_GetReport, null, options, request);
+         return CallInvoker.BlockingUnaryCall(__Method_GetReport, null, options, request);
       }
       public virtual grpc::AsyncUnaryCall<global::ReverseDns.EndPointDataResponse> GetReportAsync(global::ReverseDns.EndpointDataRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
