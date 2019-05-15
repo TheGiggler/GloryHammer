@@ -13,9 +13,9 @@ They handle their individual requests from the proxies and their responses are f
 
 Because the return data from the various services was not heterogenous, the data returned for the various services will have different shapes.
 
-The report can be retrieved again at the URL returned in the Location header.  For the purpose of this exercise, it's only stored in memory rather than a durable store.  In production, MongoDB would be a natural store for it as will never be written to again, only read.
+The report can be retrieved again at the URL returned in the Location header.  For the purpose of this exercise, it's only stored in memory rather than a durable store.  In production, MongoDB would be a natural store for it as will ever-more be read only.
 
-There is rate limiting configured in appSettings.json of the web api.  You'll see some 429's if you POST fast enough.
+There is rate limiting of POST requests.  You'll see some 429's if you POST fast enough.
 
 Swagger documentation is available at https://tocciwebapi.azurewebsites.net/swagger/index.html.
 
