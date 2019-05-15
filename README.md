@@ -41,7 +41,9 @@ I haven't done so here, but I find that Serilog and Seq make a nice combination 
 
 
 Known Issues:
+
 Subdomain with domain name will annoy RDAP service
+
 
 Todos:
 In the cause of resilience, wrap console apps in Windows Services.
@@ -52,6 +54,7 @@ Add structured logging with Serilog and Seq.
 
 Rewrite the workers in Golang!
 
+Addendum: Beware of Docker Desktop for Windows!
 
 
 
