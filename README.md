@@ -45,8 +45,11 @@ Subdomain with domain name will annoy RDAP service
 
 Todos:
 In the cause of resilience, wrap console apps in Windows Services.
+
 The models for the various service outputs could use a base class.
+
 Add structured logging with Serilog and Seq.
+
 Rewrite the workers in Golang!
 
 
