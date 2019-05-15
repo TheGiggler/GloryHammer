@@ -34,14 +34,14 @@ There's also a Location header with the Uri of the report, which can be used to 
 I typically handle and log exceptions where they occur rather than letting them bubble up and possibly kill the whole process.
 My practice is to return a typed result object that includes information on success or failure.
 
-I was going to use Polly to implement retry/backoff in the ServiceProxies where they make the gRPC call but decided not to hold up the entire flow due to one possibluy transient fault.  It's easy enough to submit another request.
+I was going to use Polly to implement retry/backoff in the ServiceProxies where they make the gRPC call but decided not to hold up the entire flow due to one possibly transient fault.  It's easy enough to submit another request.
 
-I haven't done so here, but I find that Serilog and Seq make a nice combination for saving and accessing structured logs in applications of this size.
+I haven't done so here, but I find that Serilog and Seq make a nice combination for saving and accessing structured logs in applications of this modest size and breadth..
 
 
 
 Known Issues:
-Hostname with domain name will annoy RDAP service
+Subdomain with domain name will annoy RDAP service
 
 Todos:
 In the cause of resilience, wrap console apps in Windows Services.
