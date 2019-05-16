@@ -46,6 +46,7 @@ Subdomain with domain name will annoy RDAP service
 
 
 Todos:
+
 In the cause of resilience, wrap console apps in Windows Services. (Edit: This bit me already as the VM was restarted without warning!  I now have the services run by the task scheduler on startup.)
 
 The models for the various service outputs could use a base class.
