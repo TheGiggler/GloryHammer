@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Tests.IntegrationTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tocci.Services.Proxy", "Tocci.Services.Concrete\Tocci.Services.Proxy.csproj", "{A710288B-FCEA-4888-830B-114142EC7105}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{FBADF037-E609-4B23-BA5A-5C6FFA543EDA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gRPC Services", "gRPC Services", "{FBADF037-E609-4B23-BA5A-5C6FFA543EDA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcGeolocationService", "ConcreteGeolocationService\GrpcGeolocationService.csproj", "{D639B972-DEBF-45DA-BF82-155CBF9F867F}"
 EndProject
@@ -24,6 +24,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcReverseDnsService", "GrpcReverseDnsService\GrpcReverseDnsService.csproj", "{8029A7B1-4720-4600-9C3E-1FEBE67C78CA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcRDAPService", "GrpcRDAPService\GrpcRDAPService.csproj", "{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serverless", "Serverless", "{A30B7B9D-613F-4F33-AA0A-2E17CA89DA60}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Functions", "Functions", "{437F879C-F41A-4F36-B15D-8880E3EB534C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseDnsFunction", "ReverseDnsFunction\ReverseDnsFunction.csproj", "{D783AB53-ECF0-41FB-8403-8B700996AAB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +77,10 @@ Global
 		{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D783AB53-ECF0-41FB-8403-8B700996AAB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D783AB53-ECF0-41FB-8403-8B700996AAB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D783AB53-ECF0-41FB-8403-8B700996AAB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D783AB53-ECF0-41FB-8403-8B700996AAB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +91,8 @@ Global
 		{80621A28-E65B-460D-90EC-464BEABE942B} = {FBADF037-E609-4B23-BA5A-5C6FFA543EDA}
 		{8029A7B1-4720-4600-9C3E-1FEBE67C78CA} = {FBADF037-E609-4B23-BA5A-5C6FFA543EDA}
 		{315B8794-E6B8-4E5F-A7C6-5EED651CBDB6} = {FBADF037-E609-4B23-BA5A-5C6FFA543EDA}
+		{437F879C-F41A-4F36-B15D-8880E3EB534C} = {A30B7B9D-613F-4F33-AA0A-2E17CA89DA60}
+		{D783AB53-ECF0-41FB-8403-8B700996AAB2} = {437F879C-F41A-4F36-B15D-8880E3EB534C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {66D3AE86-23F7-4B3B-91F0-2A6E4F540868}

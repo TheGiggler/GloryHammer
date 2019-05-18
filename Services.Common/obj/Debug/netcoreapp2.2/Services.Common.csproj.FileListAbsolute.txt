@@ -6,3 +6,4 @@ C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\obj\Debug\netcoreapp
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\obj\Debug\netcoreapp2.2\Services.Common.AssemblyInfo.cs
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\obj\Debug\netcoreapp2.2\Services.Common.dll
 C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\obj\Debug\netcoreapp2.2\Services.Common.pdb
+C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\Services.Common\obj\Debug\netcoreapp2.2\Services.Common.csprojAssemblyReference.cache

@@ -9,7 +9,7 @@ using Tocci.Services.Proxy.Models;
 
 namespace Tocci.Services.Proxy
 {
-    public class ReverseDnsServiceProxy : EndpointServiceProxyBase
+    public class ReverseDnsServiceGrpcProxy : EndpointServiceProxyBase
     {
         private string uri, name;
         public override string ServiceAddress { get; set; }
@@ -19,7 +19,7 @@ namespace Tocci.Services.Proxy
 
         string grpcAddress;
         int grpcPort;
-        public ReverseDnsServiceProxy(GrpcConfig config)
+        public ReverseDnsServiceGrpcProxy(GrpcConfig config)
         {
             var setting = config.Settings.Find(s => s.ServiceType == ServiceType.ReverseDns);
 

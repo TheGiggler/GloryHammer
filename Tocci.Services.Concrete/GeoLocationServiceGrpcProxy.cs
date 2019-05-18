@@ -9,7 +9,7 @@ using Tocci.Services.Proxy.Models;
 
 namespace Tocci.Services.Concrete
 {
-    public class GeolocationServiceProxy:EndpointServiceProxyBase
+    public class GeolocationServiceGrpcProxy:EndpointServiceProxyBase
     {
         private string uri, name;
         public override string ServiceAddress { get; set; }
@@ -20,9 +20,9 @@ namespace Tocci.Services.Concrete
         string grpcAddress;
         int grpcPort;
 
-        public GeolocationServiceProxy() { }
+        public GeolocationServiceGrpcProxy() { }
 
-        public GeolocationServiceProxy(GrpcConfig config)
+        public GeolocationServiceGrpcProxy(GrpcConfig config)
         {
             var setting = config.Settings.Find(s => s.ServiceType == ServiceType.Geolocation);
 

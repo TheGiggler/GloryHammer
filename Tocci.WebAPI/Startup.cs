@@ -28,7 +28,7 @@ namespace Tocci.WebAPI
         {
             Configuration = configuration;
             //need to force it to load Tocci.Services.Proxy
-            var b = new GeolocationServiceProxy();
+            var b = new GeolocationServiceGrpcProxy();
             b = null;
 
         }

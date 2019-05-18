@@ -2,6 +2,6 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ShowAllFiles>false</ShowAllFiles>
-    <_LastSelectedProfileId>C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\Properties\PublishProfiles\GrpcGeolocationService - Web Deploy.pubxml</_LastSelectedProfileId>
+    <_LastSelectedProfileId>C:\Users\mctoc\source\repos\Tocci.WebAPI.V2\ConcreteGeolocationService\Properties\PublishProfiles\WebJobsApp20190516081315 - Web Deploy.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
 </Project>

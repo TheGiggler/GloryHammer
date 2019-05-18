@@ -10,7 +10,7 @@ using Tocci.Services.Proxy.Models;
 
 namespace Tocci.Services.Proxy
 {
-    public class PingServiceProxy: EndpointServiceProxyBase
+    public class PingServiceGrpcProxy: EndpointServiceProxyBase
     {
         private string uri, name;
         public override string ServiceAddress { get; set; }
@@ -22,7 +22,7 @@ namespace Tocci.Services.Proxy
         int grpcPort;
 
 
-        public PingServiceProxy(GrpcConfig config)
+        public PingServiceGrpcProxy(GrpcConfig config)
         {
             var setting = config.Settings.Find(s => s.ServiceType == ServiceType.Ping);
 

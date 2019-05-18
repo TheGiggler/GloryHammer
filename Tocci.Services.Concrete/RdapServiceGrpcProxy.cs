@@ -9,7 +9,7 @@ using Tocci.Services.Proxy.Models;
 
 namespace Tocci.Services.Proxy
 {
-    public class RdapServiceProxy : EndpointServiceProxyBase
+    public class RdapServiceGrpcProxy : EndpointServiceProxyBase
     {
         private string uri, name;
         public override string ServiceAddress { get; set; }
@@ -19,7 +19,7 @@ namespace Tocci.Services.Proxy
 
         string grpcAddress;
         int grpcPort;
-        public RdapServiceProxy(GrpcConfig config)
+        public RdapServiceGrpcProxy(GrpcConfig config)
         {
             var setting = config.Settings.Find(s => s.ServiceType == ServiceType.RDAP);
 
